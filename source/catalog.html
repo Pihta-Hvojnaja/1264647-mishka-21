@@ -117,15 +117,16 @@
       </li>
     </ul>
 
-    <section class="video">
-      <h2 class="video__heading">Процесс производства</h2>
-      <p class="video__description">
+    <section class="video-box">
+      <h2 class="video-box__heading">Процесс производства</h2>
+      <p class="video-box__description">
         По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том,
         как появляются наши товары.
       </p>
 
-      <div class="video__box">
+      <div class="video">
         <video width="250" height="160" poster="https://via.placeholder.com/250x160"></video>
+        <button class="video__button" type="button" aria-label="Кнопка: воспроизведение, пауза"></button>
       </div>
 
       <p>
@@ -180,5 +181,28 @@
     </section>
   </footer>
 
+  <div class="modal">
+    <h2 class="modal__heading">Добавить в корзину</h2>
+
+    <p class="modal__instruction">Выберите размер:</p>
+
+    <div class="modal__buttons">
+      <button class="modal__button" type="button" aria-label="Выбрать размер S">
+        S
+      </button>
+
+      <button class="modal__button" type="button" aria-label="Выбрать размер M">
+        M
+      </button>
+
+      <button class="modal__button" type="button" aria-label="Выбрать размер L">
+        L
+      </button>
+    </div>
+
+    <p>
+      <a class="button modal__add" href="#">ДОБАВИТЬ</a>
+    </p>
+  </div>
 </body>
 </html>
