@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+<body class="page-body">
+  <header class="page-header">
+    <a class="logo page-header__logo" href="index.html">
+      <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
+    </a>
+
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="hidden">Открыть меню</span>
+      </button>
+
+      <ul class="site-list main-nav__list">
+        <li class="site-list__item">
+            Каталог товаров
+        </li>
+
+        <li class="site-list__item">
+          <a class="site-list__link" href="form.html">
+            Вязание на заказ
+          </a>
+        </li>
+
+        <li class="site-list__item site-list__item--hidden">
+          <a class="site-list__link" href="#">
+            Новые поступления
+          </a>
+        </li>
+
+        <li class="site-list__item site-list__item--hidden">
+          <a class="site-list__link" href="#">
+            Распродажа
+          </a>
+        </li>
+      </ul>
+
+      <form class="search main-nav__search" action="https://echo.htmlacademy.ru" method="get">
+        <label class="hidden" for="search">Найти на сайте</label>
+        <input class="search__control" id="search" type="search" name="search" placeholder="Поиск по сайту">
+
+        <button class="search__submit" type="submit">
+          <span class="hidden">Найти</span>
+        </button>
+      </form>
+
+      <p class="cart main-nav__cart">
+        <a class="cart__link" href="#">
+          Корзина: <span>пока пуста</span>
+        </a>
+      </p>
+    </nav>
+
+    <p class="extra-info extra-info--hidden">Бесплатная доставка по России</p>
+  </header>
+
+  <main class="page-main">
+    <h1 class="page-heading title">Каталог товаров</h1>
+
+    <ul class="cards">
+      <li class="cards__item">
+        <article class="card">
+
+          <div class="card__wrapper">
+            <h2 class="card__heading">
+              <a href="#">
+                Зайчик-попрыгайчик
+              </a>
+            </h2>
+
+            <p class="card__description">Рост 30 см, вес 200 г</p>
+
+            <div class="card__buy">
+              <b class="card__price">1 200 руб.</b>
+              <a class="card__cart" href="#">
+                <span class="hidden">Добавить в корзину</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="card__link-img" href="#">
+            <img class="card__img" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Вязаный заяц цвета морской воды">
+          </a>
+        </article>
+      </li>
+
+      <li class="cards__item">
+        <article class="card">
+
+          <div class="card__wrapper">
+            <h2 class="card__heading">
+              <a href="#">
+                Корзинка для белья
+              </a>
+            </h2>
+
+            <p class="card__description">Диаметр 15 см, высота 10 см</p>
+
+            <div class="card__buy">
+              <b class="card__price">690 руб.</b>
+              <a class="card__cart" href="#">
+                <span class="hidden">Добавить в корзину</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="card__link-img" href="#">
+            <img class="card__img" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Бело-оранжевая корзинка с бельем">
+          </a>
+        </article>
+      </li>
+
+      <li class="cards__item">
+        <article class="card">
+
+          <div class="card__wrapper">
+            <h2 class="card__heading">
+              <a href="#">
+                Большая корзинка для игрушек
+              </a>
+            </h2>
+
+            <p class="card__description">Диаметр 30 см, высота 30 см</p>
+
+            <div class="card__buy">
+              <b class="card__price">1 500 руб.</b>
+              <a class="card__cart" href="#">
+                <span class="hidden">Добавить в корзину</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="card__link-img" href="#">
+            <img class="card__img" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Бело-зеленая корзинка с вязаными игрушками">
+          </a>
+        </article>
+      </li>
+    </ul>
+
+    <section class="video-box">
+      <h2 class="video-box__heading">Процесс производства</h2>
+      <p class="video-box__description">
+        По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том,
+        как появляются наши товары.
+      </p>
+
+      <div class="video">
+        <img src="https://via.placeholder.com/250x160" width="250" height="160" alt="Зелено-серая вязаная корзинка">
+        <button class="video__button" type="button" aria-label="Кнопка: воспроизведение, пауза"></button>
+      </div>
+
+      <a class="button" href="#">СДЕЛАТЬ ЗАКАЗ</a>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <a class="logo page-footer__logo" href="index.html">
+      <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
+    </a>
+
+    <section class="social">
+      <h2 class="hidden">Мы в социальных сетях</h2>
+
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="#">
+            <span class="hidden">Мы в Instagram</span>
+            <!-- img - временное решение -->
+            <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="">
+          </a>
+        </li>
+
+        <li class="social__item">
+          <a href="#">
+            <span class="hidden">Мы в Facebook</span>
+            <!-- img - временное решение -->
+            <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="">
+          </a>
+        </li>
+
+        <li class="social__item">
+          <a href="#">
+            <span class="hidden">Мы в Twitter</span>
+            <!-- img - временное решение -->
+            <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="">
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="copyright">
+      <h2 class="hidden">Разработчик сайта</h2>
+
+      <a href="https://htmlacademy.ru/intensive/adaptive">
+        <b>Разработано</b>
+        <!-- img - временное решение -->
+        <img class="copyright__logo" src="https://via.placeholder.com/27x35" width="27" height="35" alt="">
+      </a>
+    </section>
+  </footer>
+
+  <div class="modal page-body__modal">
+    <h2 class="modal__heading">Добавить в корзину</h2>
+
+    <p class="modal__instruction">Выберите размер:</p>
+
+    <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+
+      <ul class="modal__list">
+        <li class="modal__item">
+          <input class="modal__control hidden" id="s" type="radio" name="size" value="S" checked>
+          <label class="modal__label" for="s">S</label>
+        </li>
+
+        <li class="modal__item">
+          <input class="modal__control hidden" id="m" type="radio" name="size" value="M">
+          <label class="modal__label" for="m">M</label>
+        </li>
+
+        <li class="modal__item">
+          <input class="modal__control hidden" id="l" type="radio" name="size" value="L">
+          <label class="modal__label" for="l">L</label>
+        </li>
+      </ul>
+
+      <button class="button modal__add" type="submit">ДОБАВИТЬ</button>
+    </form>
+  </div>
+</body>
+</html>
