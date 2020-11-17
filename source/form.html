@@ -59,7 +59,7 @@
   </header>
 
   <main class="page-main">
-    <h1 class="page-heading">Вязание на заказ</h1>
+    <h1 class="page-heading title">Вязание на заказ</h1>
 
     <p class="page-main__guide">Мы будем рады воплотить в жизнь ваши пожелания!
       Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
@@ -138,23 +138,17 @@
       </fieldset>
 
       <fieldset class="form__fieldset">
-        <legend class="form__legend">ТЕЛ</legend>
-
-        <label class="form__label hidden" for="tel">Номер телефона</label>
+        <label class="form__legend" for="tel">ТЕЛ</label>
         <input class="form__control form__control--phone" id="tel" type="tel" name="phone" pattern="\+7[0-9]{10}|8[0-9]{10}" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
       </fieldset>
 
       <fieldset class="form__fieldset">
-        <legend class="form__legend">E-MAIL</legend>
-
-        <label class="form__label hidden" for="email">Ваша электронная почта</label>
+        <label class="form__legend" for="email">E-MAIL</label>
         <input class="form__control form__control--email"  id="email" type="email" name="email" placeholder="Ваш Email*" required>
       </fieldset>
 
       <fieldset class="form__fieldset">
-        <legend class="form__legend">ДОП</legend>
-
-        <label class="form__label hidden" for="letter">Ваши пожелания к заказу</label>
+        <label class="form__legend" for="letter">ДОП</label>
         <textarea class="form__control form__control--textarea" id="letter" name="letter"
           rows="5" autocomplete="off" placeholder="Опишите все ваши пожелания к заказу">
         </textarea>
@@ -164,14 +158,12 @@
         <small>*Поля обязательны для заполнения</small>
       </p>
 
-      <p>
-        <button class="button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
-      </p>
+      <button class="button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
     </form>
   </main>
 
   <footer class="page-footer">
-    <a class="logo page-footer__logo">
+    <a class="logo page-footer__logo" href="#">
       <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
     </a>
 

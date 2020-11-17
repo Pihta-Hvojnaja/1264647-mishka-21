@@ -59,60 +59,84 @@
   </header>
 
   <main class="page-main">
-    <h1 class="page-heading">Каталог товаров</h1>
+    <h1 class="page-heading title">Каталог товаров</h1>
 
     <ul class="cards">
       <li class="cards__item">
         <article class="card">
-          <a class="card__link" href="#">
-            <h2 class="card__heading">Зайчик-попрыгайчик</h2>
+
+          <div class="card__wrapper">
+            <h2 class="card__heading">
+              <a href="#">
+                Зайчик-попрыгайчик
+              </a>
+            </h2>
+
+            <p class="card__description">Рост 30 см, вес 200 г</p>
+
+            <div class="card__buy">
+              <b class="card__price">1 200 руб.</b>
+              <a class="card__cart" href="#">
+                <span class="hidden">Добавить в корзину</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="card__link-img" href="#">
             <img class="card__img" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Вязаный заяц цвета морской воды">
           </a>
-
-          <p class="card__description">Рост 30 см, вес 200 г</p>
-
-          <div class="buy">
-            <b class="buy__price">1 200 руб.</b>
-            <a class="buy__cart" href="#">
-              <span class="hidden">Добавить в корзину</span>
-            </a>
-          </div>
         </article>
       </li>
 
       <li class="cards__item">
         <article class="card">
-          <a class="card__link" href="#">
-            <h2 class="card__heading">Корзинка для белья</h2>
+
+          <div class="card__wrapper">
+            <h2 class="card__heading">
+              <a href="#">
+                Корзинка для белья
+              </a>
+            </h2>
+
+            <p class="card__description">Диаметр 15 см, высота 10 см</p>
+
+            <div class="card__buy">
+              <b class="card__price">690 руб.</b>
+              <a class="card__cart" href="#">
+                <span class="hidden">Добавить в корзину</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="card__link-img" href="#">
             <img class="card__img" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Бело-оранжевая корзинка с бельем">
           </a>
-
-          <p class="card__description">Диаметр 15 см, высота 10 см</p>
-
-          <div class="buy">
-            <b class="buy__price">690 руб.</b>
-            <a class="buy__cart" href="#">
-              <span class="hidden">Добавить в корзину</span>
-            </a>
-          </div>
         </article>
       </li>
 
       <li class="cards__item">
         <article class="card">
-          <a class="card__link" href="#">
-            <h2 class="card__heading">Большая корзинка для игрушек</h2>
+
+          <div class="card__wrapper">
+            <h2 class="card__heading">
+              <a href="#">
+                Большая корзинка для игрушек
+              </a>
+            </h2>
+
+            <p class="card__description">Диаметр 30 см, высота 30 см</p>
+
+            <div class="card__buy">
+              <b class="card__price">1 500 руб.</b>
+              <a class="card__cart" href="#">
+                <span class="hidden">Добавить в корзину</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="card__link-img" href="#">
             <img class="card__img" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Бело-зеленая корзинка с вязаными игрушками">
           </a>
-
-          <p class="card__description">Диаметр 30 см, высота 30 см</p>
-
-          <div class="buy">
-            <b class="buy__price">1 500 руб.</b>
-            <a class="buy__cart" href="#">
-              <span class="hidden">Добавить в корзину</span>
-            </a>
-          </div>
         </article>
       </li>
     </ul>
@@ -125,18 +149,16 @@
       </p>
 
       <div class="video">
-        <video width="250" height="160" poster="https://via.placeholder.com/250x160"></video>
+        <img src="https://via.placeholder.com/250x160" width="250" height="160" alt="Зелено-серая вязаная корзинка">
         <button class="video__button" type="button" aria-label="Кнопка: воспроизведение, пауза"></button>
       </div>
 
-      <p>
-        <a class="button" href="#">СДЕЛАТЬ ЗАКАЗ</a>
-      </p>
+      <a class="button" href="#">СДЕЛАТЬ ЗАКАЗ</a>
     </section>
   </main>
 
   <footer class="page-footer">
-    <a class="logo page-footer__logo">
+    <a class="logo page-footer__logo" href="#">
       <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
     </a>
 
@@ -181,28 +203,32 @@
     </section>
   </footer>
 
-  <div class="modal">
+  <div class="modal page-body__modal">
     <h2 class="modal__heading">Добавить в корзину</h2>
 
     <p class="modal__instruction">Выберите размер:</p>
 
-    <div class="modal__buttons">
-      <button class="modal__button" type="button" aria-label="Выбрать размер S">
-        S
-      </button>
+    <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
 
-      <button class="modal__button" type="button" aria-label="Выбрать размер M">
-        M
-      </button>
+      <ul class="modal__list">
+        <li class="modal__item">
+          <input class="modal__control hidden" id="s" type="radio" name="size" value="S" checked>
+          <label class="modal__label" for="s">S</label>
+        </li>
 
-      <button class="modal__button" type="button" aria-label="Выбрать размер L">
-        L
-      </button>
-    </div>
+        <li class="modal__item">
+          <input class="modal__control hidden" id="m" type="radio" name="size" value="M">
+          <label class="modal__label" for="m">M</label>
+        </li>
 
-    <p>
-      <a class="button modal__add" href="#">ДОБАВИТЬ</a>
-    </p>
+        <li class="modal__item">
+          <input class="modal__control hidden" id="l" type="radio" name="size" value="L">
+          <label class="modal__label" for="l">L</label>
+        </li>
+      </ul>
+
+      <button class="button modal__add" type="submit">ДОБАВИТЬ</button>
+    </form>
   </div>
 </body>
 </html>
