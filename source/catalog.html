@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
+
   <header class="page-header">
     <a class="logo page-header__logo" href="index.html">
       <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
@@ -15,7 +17,7 @@
         <span class="hidden">Открыть меню</span>
       </button>
 
-      <ul class="site-list main-nav__list">
+      <ul class="site-list reset-list main-nav__list">
         <li class="site-list__item">
             Каталог товаров
         </li>
@@ -59,15 +61,18 @@
   </header>
 
   <main class="page-main">
-    <h1 class="page-heading title">Каталог товаров</h1>
 
-    <ul class="cards">
+    <div class="page-main__wrapper">
+      <h1 class="title title--main-heading">Каталог товаров</h1>
+    </div>
+
+    <ul class="cards reset-list">
       <li class="cards__item">
         <article class="card">
 
           <div class="card__wrapper">
             <h2 class="card__heading">
-              <a href="#">
+              <a class="card__link-title" href="#">
                 Зайчик-попрыгайчик
               </a>
             </h2>
@@ -93,7 +98,7 @@
 
           <div class="card__wrapper">
             <h2 class="card__heading">
-              <a href="#">
+              <a class="card__link-title" href="#">
                 Корзинка для белья
               </a>
             </h2>
@@ -119,7 +124,7 @@
 
           <div class="card__wrapper">
             <h2 class="card__heading">
-              <a href="#">
+              <a class="card__link-title" href="#">
                 Большая корзинка для игрушек
               </a>
             </h2>
@@ -153,19 +158,19 @@
         <button class="video__button" type="button" aria-label="Кнопка: воспроизведение, пауза"></button>
       </div>
 
-      <a class="button" href="#">СДЕЛАТЬ ЗАКАЗ</a>
+      <a class="button video-box__button" href="#">СДЕЛАТЬ ЗАКАЗ</a>
     </section>
   </main>
 
   <footer class="page-footer">
-    <a class="logo page-footer__logo" href="index.html">
+    <a class="logo page-footer__logo">
       <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
     </a>
 
     <section class="social">
       <h2 class="hidden">Мы в социальных сетях</h2>
 
-      <ul class="social__list">
+      <ul class="reset-list social__list">
         <li class="social__item">
           <a href="#">
             <span class="hidden">Мы в Instagram</span>
@@ -195,7 +200,7 @@
     <section class="copyright">
       <h2 class="hidden">Разработчик сайта</h2>
 
-      <a href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <b>Разработано</b>
         <!-- img - временное решение -->
         <img class="copyright__logo" src="https://via.placeholder.com/27x35" width="27" height="35" alt="">
@@ -204,13 +209,13 @@
   </footer>
 
   <div class="modal page-body__modal">
-    <h2 class="modal__heading">Добавить в корзину</h2>
+    <h2 class="title modal__heading">Добавить в корзину</h2>
 
     <p class="modal__instruction">Выберите размер:</p>
 
     <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
 
-      <ul class="modal__list">
+      <ul class="reset-list modal__list">
         <li class="modal__item">
           <input class="modal__control hidden" id="s" type="radio" name="size" value="S" checked>
           <label class="modal__label" for="s">S</label>
@@ -227,7 +232,7 @@
         </li>
       </ul>
 
-      <button class="button modal__add" type="submit">ДОБАВИТЬ</button>
+      <button class="modal__add" type="submit">ДОБАВИТЬ</button>
     </form>
   </div>
 </body>

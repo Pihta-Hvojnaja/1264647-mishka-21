@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
+
   <header class="page-header">
     <a class="logo page-header__logo" href="index.html">
       <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
@@ -15,7 +17,7 @@
         <span class="hidden">Открыть меню</span>
       </button>
 
-      <ul class="site-list main-nav__list">
+      <ul class="site-list reset-list main-nav__list">
         <li class="site-list__item">
           <a class="site-list__link" href="catalog.html">
             Каталог товаров
@@ -59,7 +61,9 @@
   </header>
 
   <main class="page-main">
-    <h1 class="page-heading title">Вязание на заказ</h1>
+    <div class="page-main__wrapper">
+      <h1 class="title title--main-heading">Вязание на заказ</h1>
+    </div>
 
     <p class="page-main__guide">Мы будем рады воплотить в жизнь ваши пожелания!
       Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
@@ -69,14 +73,14 @@
       <fieldset class="form__fieldset">
         <legend class="form__legend">ТИП</legend>
 
-        <ul class="form__list">
+        <ul class="reset-list form__list">
           <li>
-            <input class="form__control form__control--radio" id="accessories" type="radio" name="type" value="accessories" checked>
+            <input class="hidden form__control form__control--radio" id="accessories" type="radio" name="type" value="accessories" checked>
             <label class="form__label form__label--radio" for="accessories">Аксессуар для интерьера</label>
           </li>
 
           <li>
-            <input class="form__control" id="toy" type="radio" name="type" value="toy">
+            <input class="hidden form__control" id="toy" type="radio" name="type" value="toy">
             <label class="form__label" for="toy">Детская игрушка</label>
           </li>
         </ul>
@@ -85,34 +89,34 @@
       <fieldset class="form__fieldset">
         <legend class="form__legend">ЦВЕТ</legend>
 
-        <ul class="form__list">
+        <ul class="reset-list form__list">
           <li>
-            <input class="form__control form__control--checkbox" id="white" type="checkbox" name="white" checked>
+            <input class="hidden form__control form__control--checkbox" id="white" type="checkbox" name="white" checked>
             <label class="form__label form__label--checkbox" for="white">Белый</label>
           </li>
 
           <li>
-            <input class="form__control" id="gray" type="checkbox" name="gray" checked>
+            <input class="hidden form__control" id="gray" type="checkbox" name="gray" checked>
             <label class="form__label" for="gray">Серый</label>
           </li>
 
           <li>
-            <input class="form__control" id="tiffany" type="checkbox" name="tiffany">
+            <input class="hidden form__control" id="tiffany" type="checkbox" name="tiffany">
             <label class="form__label" for="tiffany">«Тиффани»</label>
           </li>
 
           <li>
-            <input class="form__control" id="black" type="checkbox" name="black">
+            <input class="hidden form__control" id="black" type="checkbox" name="black">
             <label class="form__label" for="black">Черный</label>
           </li>
 
           <li>
-            <input class="form__control" id="pink" type="checkbox" name="pink">
+            <input class="hidden form__control" id="pink" type="checkbox" name="pink">
             <label class="form__label" for="pink">Розовый</label>
           </li>
 
           <li>
-            <input class="form__control" id="orange" type="checkbox" name="orange">
+            <input class="hidden form__control" id="orange" type="checkbox" name="orange">
             <label class="form__label" for="orange">Оранжевый</label>
           </li>
         </ul>
@@ -149,28 +153,26 @@
 
       <fieldset class="form__fieldset">
         <label class="form__legend" for="letter">ДОП</label>
-        <textarea class="form__control form__control--textarea" id="letter" name="letter"
-          rows="5" autocomplete="off" placeholder="Опишите все ваши пожелания к заказу">
-        </textarea>
+        <textarea class="form__control form__control--textarea" id="letter" name="letter" rows="5" autocomplete="off" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </fieldset>
 
       <p class="form__footnote">
-        <small>*Поля обязательны для заполнения</small>
+        <small class="form__footnote">*Поля обязательны для заполнения</small>
       </p>
 
-      <button class="button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+      <button class="button form__submit" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
     </form>
   </main>
 
   <footer class="page-footer">
-    <a class="logo page-footer__logo" href="index.html">
+    <a class="logo page-footer__logo">
       <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
     </a>
 
     <section class="social">
       <h2 class="hidden">Мы в социальных сетях</h2>
 
-      <ul class="social__list">
+      <ul class="reset-list social__list">
         <li class="social__item">
           <a href="#">
             <span class="hidden">Мы в Instagram</span>
@@ -200,13 +202,12 @@
     <section class="copyright">
       <h2 class="hidden">Разработчик сайта</h2>
 
-      <a href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <b>Разработано</b>
         <!-- img - временное решение -->
         <img class="copyright__logo" src="https://via.placeholder.com/27x35" width="27" height="35" alt="">
       </a>
     </section>
   </footer>
-
 </body>
 </html>
