@@ -8,3 +8,13 @@
   padding: 0;
   list-style: none;
 }
+
+.pseudo(@content: ""; @pos: absolute) {
+  content: @content;
+  position: @pos;
+}
+
+.block-size (@width; @height) {
+  width: @width;
+  height: @height;
+}
