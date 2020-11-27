@@ -8,34 +8,36 @@
 </head>
 <body class="page-body">
 
-  <header class="page-header">
+  <header class="page-header container-nav">
     <nav class="main-nav">
-      <a class="logo main-nav__logo" href="index.html">
-        <img src="img/page_logo_mobile.svg" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
-      </a>
+      <div class="main-nav__wrapper">
+        <a class="logo main-nav__logo" href="index.html">
+          <img src="img/page_logo_mobile.svg" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
+        </a>
 
-      <button class="main-nav__toggle" type="button">
-        <span class="hidden">Открыть меню</span>
-      </button>
+        <button class="main-nav__toggle" type="button">
+          <span class="hidden">Открыть меню</span>
+        </button>
+      </div>
 
       <ul class="site-list main-nav__list">
         <li class="site-list__item">
-          <a class="site-list__link" href="catalog.html">
+          <a class="site-list__link main-nav__link" href="catalog.html">
             Каталог товаров
           </a>
         </li>
 
-        <li class="site-list__item">
+        <li class="site-list__item main-nav__link">
             Вязание на заказ
         </li>
 
-        <li class="site-list__item site-list__item--hidden">
+        <li class="site-list__item">
           <a class="site-list__link" href="#">
             Новые поступления
           </a>
         </li>
 
-        <li class="site-list__item site-list__item--hidden">
+        <li class="site-list__item">
           <a class="site-list__link" href="#">
             Распродажа
           </a>
@@ -52,7 +54,7 @@
       </form>
 
       <p class="cart main-nav__cart">
-        <a class="cart__link" href="#">
+        <a class="cart__link main-nav__link" href="#">
           Корзина: <span>пока пуста</span>
         </a>
       </p>
