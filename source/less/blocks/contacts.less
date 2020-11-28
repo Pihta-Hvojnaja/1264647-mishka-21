@@ -1,1 +1,45 @@
-// Здесь будут стили
+.contacts {
+  .padding-y(38px; 38px);
+
+  @media (min-width: @tablet-width) {
+    .padding-y(68px; 57px);
+  }
+}
+
+.contacts__to-write {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    .padding-y(71px; 105px);
+  }
+
+  .contact__wrapper {
+    padding-left: 175px;
+    grid-column: span 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .contacts__map {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: -1;
+  }
+
+  .contacts__to-write {
+    margin-left: 175px;
+  }
+}

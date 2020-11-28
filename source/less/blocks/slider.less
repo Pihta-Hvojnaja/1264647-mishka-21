@@ -1,3 +1,80 @@
+.slider {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    .padding-y(78px; 186px);
+    background-image: url("../img/review.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    &::after {
+      .pseudo();
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 23px;
+      background-image: url("../img/zigzag_line_desktop.svg");
+      background-size: contain;
+    }
+  }
+}
+
 .slider__list {
   .reset-list();
+}
+
+.slider__item {
+  display: none;
+}
+
+.slider__item--visible {
+  display: block;
+}
+
+.slider__review {
+  margin: 0;
+}
+
+.slider__buttons {
+  .flex();
+  justify-content: space-between;
+}
+
+.slider__btn {
+  .block-size(50px; 26px);
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='26' viewBox='0 0 50 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z' fill='black'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.slider__btn--next {
+  transform: rotate(180deg);
+}
+
+@media (min-width: @tablet-width) {
+  .slider__buttons {
+    position: absolute;
+    right: 0;
+    bottom: 92px;
+    width: 176px;
+  }
+
+  .slider__btn {
+    padding: 19px;
+    width: 88px;
+  }
+
+  .slider__to-write {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__to-write {
+    top: 78px;
+  }
 }

@@ -2,3 +2,13 @@
   .text(14px; 30px);
   color: @black-light;
 }
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .contact {
+    .flex();
+  }
+
+  .contact_wrapper {
+    width: 50%;
+  }
+}

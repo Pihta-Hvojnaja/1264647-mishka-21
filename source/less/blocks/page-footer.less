@@ -1,3 +1,22 @@
 .page-footer {
   background-color: @grey-light;
 }
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    .padding-y(51px; 58px);
+  }
+
+  .page-footer__wrapper {
+    .flex();
+    justify-content: space-between;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+}

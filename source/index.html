@@ -126,46 +126,48 @@
         </div>
       </section>
 
-      <section class="about container">
+      <section class="about">
         <h2 class="hidden">Раздел о нас</h2>
 
-        <section class="advantures">
-          <h3 class="title advantures__heading">Коротко о нас:</h3>
+        <section class="advantures container">
+          <div class="advantures__wrapper">
+            <h3 class="title advantures__heading">Коротко о нас:</h3>
 
-          <ul class="advantures__list">
-            <li class="advantures__item advantures__item--ecology">
-              Экологически чистые материалы
-            </li>
+            <ul class="advantures__list">
+              <li class="advantures__item advantures__item--ecology">
+                Экологически чистые материалы
+              </li>
 
-            <li class="advantures__item advantures__item--style">
-              Скандинавский стиль по российской цене
-            </li>
+              <li class="advantures__item advantures__item--style">
+                Скандинавский стиль по российской цене
+              </li>
 
-            <li class="advantures__item advantures__item--like">
-              Увеличивает лайки на фотографиях
-            </li>
+              <li class="advantures__item advantures__item--like">
+                Увеличивает лайки на фотографиях
+              </li>
 
-            <li class="advantures__item advantures__item--handmade">
-              Связано вручную с любовью и умилением
-            </li>
+              <li class="advantures__item advantures__item--handmade">
+                Связано вручную с любовью и умилением
+              </li>
 
-            <li class="advantures__item advantures__item--support">
-              Поддержка отечественного производителя
-            </li>
+              <li class="advantures__item advantures__item--support">
+                Поддержка отечественного производителя
+              </li>
 
-            <li class="advantures__item advantures__item--gift-wrapping">
-              Поставляется в подарочной упаковке
-            </li>
-          </ul>
+              <li class="advantures__item advantures__item--gift-wrapping">
+                Поставляется в подарочной упаковке
+              </li>
+            </ul>
+          </div>
         </section>
 
-        <section class="reviews">
+        <section class="reviews container">
           <div class="slider reviews__wrapper">
             <h3 class="title slider__heading">Отзывы</h3>
 
             <ul class="slider__list">
-              <li class="slider__item">
-                <blockquote class="review">
+              <li class="slider__item slider__item--visible">
+                <blockquote class="review slider__review">
                   <p class="review__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
                     у популярных инстамамочек.
                     В отчаянии, я накупила аксессуаров и игрушек в Мишке,
@@ -189,55 +191,61 @@
             </ul>
 
             <div class="slider__buttons">
-              <button class="slider__prev" type="button">
+              <button class="slider__btn slider__btn--prev" type="button">
                 <span class="hidden">
                   Предыдущий отзыв
                 </span>
               </button>
 
-              <button class="slider__next" type="button">
+              <button class="slider__btn slider__btn--next" type="button">
                 <span class="hidden">
                   Следующий отзыв
                 </span>
               </button>
             </div>
+
+            <a class="button slider__to-write" href="#">НАПИСАТЬ</a>
           </div>
         </section>
-
-        <a class="button" href="#">НАПИСАТЬ</a>
       </section>
 
       <section class="contacts container">
-        <h2 class="title title--contacts">Контакты</h2>
+        <div class="contact__wrapper ">
+          <h2 class="title title--contacts">Контакты</h2>
 
-        <dl class="contact">
-          <dt class="contact__term">
-            e-mail:
-          </dt>
-          <dd class="contact__definition">
-            <address class="address-site">
-              <a class="address-site__email" href="mailto:info@mimimishkashop.ru">
-                info@mimimishkashop.ru
-              </a>
-            </address>
-          </dd>
+          <dl class="contact contacts__contact">
+            <div class="contact_wrapper">
+              <dt class="contact__term">
+                e-mail:
+              </dt>
+              <dd class="contact__definition">
+                <address class="address-site">
+                  <a class="address-site__email" href="mailto:info@mimimishkashop.ru">
+                    info@mimimishkashop.ru
+                  </a>
+                </address>
+              </dd>
+            </div>
 
-          <dt class="contact__term">
-            адрес:
-          </dt>
-          <dd class="contact__definition">
-            г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101
-          </dd>
-        </dl>
+            <div class="contact_wrapper">
+              <dt class="contact__term">
+                адрес:
+              </dt>
+              <dd class="contact__definition">
+                г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101
+              </dd>
+            </div>
+          </dl>
+        </div>
 
-        <div class="map">
-          <img class="map__item" src="https://via.placeholder.com/320x455" width="320" height="455" alt="Магазин Mishka по адресу: г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+        <div class="map contacts__map">
+          <img class="map__item" src="../img/map_1.jpg" width="320" height="455" alt="Магазин Mishka по адресу: г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
 
           <iframe class="map__item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056438!2d30.320853351321308!3d59.93871916896568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1605470036787!5m2!1sru!2sru"
             width="320" height="455"></iframe>
         </div>
 
-        <a class="button" href="#">НАПИШИТЕ НАМ</a>
+        <a class="button contacts__to-write" href="#">НАПИШИТЕ НАМ</a>
       </section>
     </main>
 
