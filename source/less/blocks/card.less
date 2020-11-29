@@ -1,5 +1,11 @@
 .card {
+  .flex();
+  align-items: center;
   border-bottom: 1px solid @color-card-line;
+}
+
+.card__wrapper {
+  order: 2;
 }
 
 .card__heading {
@@ -17,4 +23,32 @@
 
 .card__price {
   .text(15px; 24px);
+}
+
+@media (max-width: @tablet-width - 1px), (min-width: @desktop-width) {
+  .card {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .card__link-img,
+  .card__wrapper {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card {
+    border: 1px solid @color-card-line;
+  }
+
+  .card__wrapper {
+    width: 256px;
+    min-height: 197px;
+  }
+
+  .card__link-img {
+    width: 316px;
+  }
 }
