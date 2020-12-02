@@ -9,10 +9,14 @@
 <body class="page-body">
 
   <header class="page-header container-nav">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
       <div class="main-nav__wrapper">
-        <a class="logo main-nav__logo" href="index.html">
-          <img src="img/page_logo_mobile.svg" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
+        <a class="main-nav__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logotype_desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logotype_tablet.svg">
+            <img src="img/logotype_mobile.svg" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
+          </picture>
         </a>
 
         <button class="main-nav__toggle" type="button">
@@ -21,25 +25,25 @@
       </div>
 
       <ul class="site-list main-nav__list">
-        <li class="site-list__item">
+        <li class="site-list__item main-nav__item">
           <a class="site-list__link main-nav__link">
             Каталог товаров
           </a>
         </li>
 
-        <li class="site-list__item">
+        <li class="site-list__item main-nav__item">
           <a class="site-list__link main-nav__link" href="form.html">
             Вязание на заказ
           </a>
         </li>
 
-        <li class="site-list__item">
+        <li class="site-list__item main-nav__item">
           <a class="site-list__link" href="#">
             Новые поступления
           </a>
         </li>
 
-        <li class="site-list__item">
+        <li class="site-list__item main-nav__item">
           <a class="site-list__link" href="#">
             Распродажа
           </a>
@@ -67,9 +71,9 @@
           Корзина: <span>пока пуста</span>
         </a>
       </p>
-    </nav>
 
-    <p class="extra-info main-nav__extra-info">Бесплатная доставка по России</p>
+      <p class="extra-info main-nav__extra-info">Бесплатная доставка по России</p>
+    </nav>
   </header>
 
   <main class="page-main">
