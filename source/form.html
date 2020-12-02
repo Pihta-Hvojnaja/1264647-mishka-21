@@ -84,8 +84,8 @@
     </div>
 
     <form class="form" action="https://echo.htmlacademy.ru" method="get">
-      <div class="container form__container">
-        <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset">
+        <div class="container form__container">
           <legend class="form__legend">ТИП</legend>
 
           <ul class="form__list">
@@ -99,49 +99,49 @@
               <label class="form__label" for="toy">Детская игрушка</label>
             </li>
           </ul>
-        </fieldset>
-      </div>
+        </div>
+      </fieldset>
 
-      <div class="container form__container">
-        <fieldset class="form__fieldset">
-            <legend class="form__legend">ЦВЕТ</legend>
+      <fieldset class="form__fieldset">
+        <div class="container form__container">
+          <legend class="form__legend">ЦВЕТ</legend>
 
-            <ul class="form__list form__list--color">
-              <li class="form__item form__item--color">
-                <input class="hidden form__control form__control--checkbox" id="white" type="checkbox" name="white" checked>
-                <label class="form__label form__label--checkbox" for="white">Белый</label>
-              </li>
+          <ul class="form__list form__list--color">
+            <li class="form__item form__item--color">
+              <input class="hidden form__control form__control--checkbox" id="white" type="checkbox" name="white" checked>
+              <label class="form__label form__label--checkbox" for="white">Белый</label>
+            </li>
 
-              <li class="form__item">
-                <input class="hidden form__control" id="gray" type="checkbox" name="gray" checked>
-                <label class="form__label" for="gray">Серый</label>
-              </li>
+            <li class="form__item">
+              <input class="hidden form__control" id="gray" type="checkbox" name="gray" checked>
+              <label class="form__label" for="gray">Серый</label>
+            </li>
 
-              <li class="form__item">
-                <input class="hidden form__control" id="tiffany" type="checkbox" name="tiffany">
-                <label class="form__label" for="tiffany">«Тиффани»</label>
-              </li>
+            <li class="form__item">
+              <input class="hidden form__control" id="tiffany" type="checkbox" name="tiffany">
+              <label class="form__label" for="tiffany">«Тиффани»</label>
+            </li>
 
-              <li class="form__item">
-                <input class="hidden form__control" id="black" type="checkbox" name="black">
-                <label class="form__label" for="black">Черный</label>
-              </li>
+            <li class="form__item">
+              <input class="hidden form__control" id="black" type="checkbox" name="black">
+              <label class="form__label" for="black">Черный</label>
+            </li>
 
-              <li class="form__item">
-                <input class="hidden form__control" id="pink" type="checkbox" name="pink">
-                <label class="form__label" for="pink">Розовый</label>
-              </li>
+            <li class="form__item">
+              <input class="hidden form__control" id="pink" type="checkbox" name="pink">
+              <label class="form__label" for="pink">Розовый</label>
+            </li>
 
-              <li class="form__item">
-                <input class="hidden form__control" id="orange" type="checkbox" name="orange">
-                <label class="form__label" for="orange">Оранжевый</label>
-              </li>
-            </ul>
-        </fieldset>
-      </div>
+            <li class="form__item">
+              <input class="hidden form__control" id="orange" type="checkbox" name="orange">
+              <label class="form__label" for="orange">Оранжевый</label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
 
-      <div class="container form__container">
-        <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset">
+        <div class="container form__container">
           <legend class="form__legend">ФИО</legend>
 
           <label class="form__label form__label--text">
@@ -158,20 +158,23 @@
             Отчество:
             <input class="form__control form__control--text"  type="text" name="patronymic" placeholder="Отчество, если желаете">
           </label>
-        </fieldset>
-      </div>
+        </div>
+      </fieldset>
 
-      <div class="container form__container">
-        <fieldset class="form__fieldset">
-          <label class="form__legend" for="tel">ТЕЛ</label>
-          <input class="form__control form__control--phone" id="tel" type="tel" name="phone" pattern="\+7[0-9]{10}|8[0-9]{10}" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-        </fieldset>
+      <fieldset class="form__fieldset">
+        <div class="container form__container">
+          <label class="form__legend form__legend--contacts" for="tel">
+            ТЕЛ
+            <input class="form__control form__control--phone" id="tel" type="tel" name="phone" pattern="\+7[0-9]{10}|8[0-9]{10}" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+          </label>
 
-        <fieldset class="form__fieldset">
-          <label class="form__legend" for="email">E-MAIL</label>
-          <input class="form__control form__control--email"  id="email" type="email" name="email" placeholder="Ваш Email*" required>
-        </fieldset>
-      </div>
+          <label class="form__legend form__legend--contacts" for="email">
+            E-MAIL
+            <input class="form__control form__control--email"  id="email" type="email" name="email" placeholder="Ваш Email*" required>
+          </label>
+        </div>
+      </fieldset>
+
 
       <div class="container form__container form__container--bottom">
         <fieldset class="form__fieldset">

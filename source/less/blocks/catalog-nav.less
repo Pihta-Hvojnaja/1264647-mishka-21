@@ -10,21 +10,28 @@
 
 .catalog-nav__item {
   position: relative;
-  min-height: 104px;
 
   &:nth-child(odd) {
-    background-color: @green-light;
+    background-color: @green-light-hover;
 
-    .catalog-nav__link:hover {
-      background-color: @green-light-hover;
+    .catalog-nav__link {
+      background-color: @green-light;
+
+      &:hover {
+        background-color: @green-light-hover;
+      }
     }
   }
 
   &:nth-child(even) {
-    background-color: @green-dark;
+    background-color: @green-dark-hover;
 
-    .catalog-nav__link:hover {
-      background-color: @green-dark-hover;
+    .catalog-nav__link {
+      background-color: @green-dark;
+
+      &:hover {
+        background-color: @green-dark-hover;
+      }
     }
   }
 
@@ -37,8 +44,8 @@
   display: block;
   position: relative;
   width: 100%;
-  min-height: 104px;
-  padding: 25px 120px 31px 30px;
+  height: 100%;
+  padding: 24px 120px 31px 30px;
   color: @white;
 
   &::after {
@@ -61,20 +68,18 @@
   }
 
   &:hover {
-    padding-top: 25px - 5px;
-    border-bottom: 10px solid transparent;
+    transform: translateY(-5px);
 
     &::after {
-      transform: translateY(-5px);
       opacity: 0.7;
-    }
-
-    @media (max-width: @tablet-width - 1px) {
-      position: absolute;
     }
   }
 
   &:active::after {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 120px 34px 36px;
   }
 }
