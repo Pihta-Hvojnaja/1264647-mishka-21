@@ -1,1 +1,32 @@
-// Здесь будут стили
+.map {
+  position: relative;
+  .block-size(100%; 454px);
+
+  @media (min-width: @tablet-width) {
+    height: 457px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .block-size(527px; 457px);
+  }
+}
+
+.map__item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  .block-size(100%; 100%);
+  border: none;
+
+  @media (max-width: @tablet-width - 1px) {
+    right: -30px;
+    min-width: 320px;
+    width: calc(100% + 60px);
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    right: -50px;
+    min-width: 768px;
+    width: calc(100% + 100px);
+  }
+}

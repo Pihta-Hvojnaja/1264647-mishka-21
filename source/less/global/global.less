@@ -23,8 +23,28 @@ a {
   overflow: hidden;
 }
 
-.reset-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.container-nav {
+  min-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: @desktop-width;
+  }
 }
+
+.container {
+  min-width: 320px;
+  padding: 0 30px;
+
+  .container-nav;
+}
+
+/*
+@media (min-width: @mobile-width) {}
+@media (min-width: @tablet-width) {}
+@media (min-width: @desktop-width) {}
+*/

@@ -1,5 +1,162 @@
 .main-nav {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @font-family;
   line-height: 24px;
   font-weight: 700;
+}
+
+.main-nav__logo {
+  display: block;
+}
+
+.main-nav__logo img {
+  width: 86px;
+  height: 35px;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  .block-size(82px; 80px);
+  padding: 0;
+  background-color: @white;
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  .pseudo();
+  top: 32px;
+  right: 31px;
+  width: 20px;
+  height: 2px;
+  background-color: @black;
+  box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    .pseudo();
+    top: 38px;
+    right: 27px;
+    width: 27px;
+    height: 2px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav__list {
+  .reset-list();
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    font-size: 15px;
+  }
+}
+
+.main-nav__link {
+  @media (max-width: @mobile-width + 10px) {
+    padding: 29px 30px 27px 77px;
+  }
+
+  @media (min-width: @mobile-width + 10px) and (max-width: @tablet-width - 1px) {
+    padding: 29px 30px 27px 30px;
+    text-align: center;
+  }
+}
+
+.main-nav__cart {
+  margin: 0;
+}
+
+.main-nav__extra-info {
+  display: none;
+  margin: 0;
+}
+
+@media (max-width: @tablet-width - 1px) {
+  .main-nav__wrapper {
+    position: relative;
+    padding: 22px 30px 18px 30px;
+    text-align: center;
+    box-shadow: @grey-shadow;
+  }
+
+  .main-nav__item {
+    box-shadow: @grey-shadow;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 84px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "logo logo search cart"
+      "nav nav nav info";
+  }
+
+  .main-nav__wrapper {
+    grid-area: logo;
+    width: 200px;
+  }
+
+  .main-nav__logo img {
+    width: 114px;
+    height: 46px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    grid-area: nav;
+  }
+
+  .main-nav__search {
+    grid-area: search;
+  }
+
+  .main-nav__cart {
+    grid-area: cart;
+  }
+
+  .main-nav__extra-info {
+    display: block;
+    grid-area: info;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    display: grid;
+    grid-template-columns: 450px 1fr 84px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "nav logo search cart"
+      "nav logo . info";
+  }
+
+  .main-nav__logo img {
+    width: 149px;
+    height: 72px;
+  }
+
+  .main-nav__list {
+    margin-right: 30px;
+  }
+
+  .main-nav__link {
+    padding: 32px 0;
+  }
 }

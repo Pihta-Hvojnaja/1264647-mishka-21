@@ -1,1 +1,11 @@
-// Здесь будут стили
+@media (min-width: @desktop-width) {
+  .cards {
+    .flex();
+  }
+
+  .cards__item {
+    &:not(:last-child) {
+      margin-right: auto;
+    }
+  }
+}
