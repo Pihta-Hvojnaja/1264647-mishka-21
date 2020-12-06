@@ -1,7 +1,18 @@
 .page-main__wrapper {
   position: relative;
-  min-height: 150px; // временно
-  background-color: @grey-light;
+  padding-top: 70px;
+  background-color: @color-background-catalog;
+  background-image: url("../img/hero_mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center -20px;
+  background-size: cover auto;
+  border-top: 1px solid @color-card-line;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero_mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+
 
   @media (min-width: @tablet-width) {
     &::after {
@@ -23,7 +34,7 @@
 .page-main__heading {
   max-width: 100%;
   padding: 0 35px;
-  margin: 0 auto;
+  margin: 0 auto 121px auto;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -34,6 +45,14 @@
 .page-main__guide {
   .text(13px; 24px);
   color: @black-light;
+}
+
+.page-main__catalog-nav {
+  .reset-list();
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+  }
 }
 
 .page-main__cards {

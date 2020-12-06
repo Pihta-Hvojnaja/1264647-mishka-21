@@ -1,0 +1,27 @@
+.site-list-bottom {
+  display: none;
+  font-size: 15px;
+
+  @media (min-width: @desktop-width) {
+    .flex();
+    align-items: center;
+  }
+}
+
+.site-list-bottom__item {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 2px;
+
+    &:nth-child(2n+1) {
+      padding-right: 32px;
+    }
+
+    &:nth-child(2n+2) {
+      padding-left: 30px;
+    }
+  }
+}
+
+.site-list-bottom__link {
+  color: @black;
+}
