@@ -7,6 +7,10 @@
     .flex();
     padding: 0 50px;
   }
+
+  @media (min-width: @desktop-width) {
+    min-width: @desktop-width;
+  }
 }
 
 .catalog-nav__item {
@@ -81,6 +85,21 @@
   }
 
   @media (min-width: @tablet-width) {
+    .text(20px; 30px);
     padding: 25px 120px 34px 36px;
+
+    &--interior::after {
+      top: 30px;
+      right: 37px;
+      .block-size(40px; 62px);
+      background-image: url("../img/interior.svg");
+    }
+
+    &--toy::after {
+      top: 32px;
+      right: 34px;
+      .block-size(60px; 60px);
+      background-image: url("../img/toy.svg");
+    }
   }
 }
