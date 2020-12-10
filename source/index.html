@@ -110,7 +110,7 @@
         <div class="featured__card">
           <header class="featured__header">
             <h3 class="title featured__heading">Вязаные корзинки</h3>
-            <p class="featured__info">ТОВАР НЕДЕЛИ</p>
+            <p class="featured__info">ТОВАР <br class="featured__br"> НЕДЕЛИ</p>
           </header>
 
           <div class="featured__wrapper">
@@ -118,23 +118,33 @@
               ручная работа. Доступны в шести расцветках, и трех размерах.</p>
 
             <dl class="featured__properties">
-              <dt class="featured__term">Цвет:</dt>
-              <dd class="featured__definition">«Тиффани»/серый</dd>
+              <div class="featured__properties-row">
+                <dt class="featured__term">Цвет:</dt>
+                <dd class="featured__definition">«Тиффани»/серый</dd>
+              </div>
 
-              <dt class="featured__term">Диаметр:</dt>
-              <dd class="featured__definition">25 см</dd>
+              <div class="featured__properties-row">
+                <dt class="featured__term">Диаметр:</dt>
+                <dd class="featured__definition">25 см</dd>
+              </div>
 
-              <dt class="featured__term">Высота:</dt>
-              <dd class="featured__definition">15 см</dd>
+              <div class="featured__properties-row">
+                <dt class="featured__term">Высота:</dt>
+                <dd class="featured__definition">15 см</dd>
+              </div>
             </dl>
           </div>
 
-          <img class="featured__img" src="https://via.placeholder.com/260x315" width="260" height="315" alt="Три зелено-серые вязаные корзинки, выстроенные в пирамиду">
+          <picture class="featured__img">
+            <source media="(min-width: 1150px)" srcset="img/triple_set_desktop.jpg 1x, img/triple_set_desktop_@2x.jpg 2x">
+            <source media="(min-width: 390px)" srcset="img/triple_set_tablet.jpg 1x, img/triple_set_tablet_@2x.jpg 2x">
+            <img class="featured__img" src="img/triple_set_mobile.jpg" srcset="img/triple_set_mobile.jpg 1x, img/triple_set_mobile_@2x.jpg 2x" alt="Три зелено-серые вязаные корзинки, выстроенные в пирамиду">
+          </picture>
 
           <footer class="featured__footer">
             <b class="featured__price">Цена: 990 руб.</b>
 
-            <a class="button" href="#">ЗАКАЗАТЬ</a>
+            <a class="button featured__button" href="#">ЗАКАЗАТЬ</a>
           </footer>
         </div>
       </section>
