@@ -1,28 +1,120 @@
 .advantures {
-  .padding-y(31px; 31px);
+  .padding-y(33px; 31px);
 }
 
 .advantures__wrapper {
   @media (min-width: @desktop-width) {
-    padding-left: 15%;
+    padding-left: 16.6%;
   }
+}
+
+.advantures__heading {
+  margin: 0;
 }
 
 .advantures__list {
   .reset-list();
+  padding-top: 27px;
   line-height: 20px;
   font-weight: 700;
 }
 
+.advantures__item {
+  position: relative;
+  margin-bottom: 29px;
+  padding-top: 55px;
+
+  &::before {
+    .pseudo();
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+
+  &--ecology {
+    &::before {
+      left: 8px;
+      .block-size(33px; 38px);
+      background-image: url("../img/icon_1.svg");
+    }
+  }
+
+  &--style {
+    &::before {
+      .block-size(47px; 27px);
+      background-image: url("../img/icon_2.svg");
+    }
+  }
+
+  &--like {
+    &::before {
+      top: 5.5px;
+      left: 7px;
+      .block-size(34px; 27px);
+      background-image: url("../img/icon_3.svg");
+    }
+  }
+
+  &--handmade {
+    &::before {
+      top: 2px;
+      left: 3px;
+      .block-size(35px; 36px);
+      background-image: url("../img/icon_4.svg");
+    }
+  }
+
+  &--support {
+    padding-top: 53px;
+
+    &::before {
+      top: 3px;
+      left: -5px;
+      .block-size(55px; 23px);
+      background-image: url("../img/icon_5.svg");
+    }
+  }
+
+  &--gift-wrapping {
+    &::before {
+      top: 3px;
+      left: 3px;
+      .block-size(33px; 32px);
+      background-image: url("../img/icon_6.svg");
+    }
+  }
+}
+
+@media (min-width: @mobile-width + 20px) and (max-width: @tablet-width - 1px) {
+  .advantures__heading,
+  .advantures__item {
+    text-align: center;
+
+    &::before {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .advantures {
+    .padding-y(55px; 55px);
+  }
+
   .advantures__list {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
-    gap: 50px 70px;
+    row-gap: 30px;
+    padding-top: 42px;
+    .text(20px; 22px);
   }
 
   .advantures__item {
+    padding-right: 20px;
+
     &:nth-child(1) {
       grid-row-start: 1;
       grid-row-end: 2;
@@ -37,5 +129,57 @@
       grid-row-start: 3;
       grid-row-end: 4;
     }
+
+    &--style {
+      padding-top: 50px;
+
+      &::before {
+        top: -3px;
+      }
+    }
+
+    &--like {
+      padding-top: 51px;
+
+      &::before {
+        top: 3px;
+        left: 8px;
+      }
+    }
+
+    &--handmade {
+      padding-top: 58px;
+
+      &::before {
+        top: 4px;
+      }
+    }
+
+    &--support {
+      padding-top: 51px;
+
+      &::before {
+        top: 0;
+      }
+    }
+
+    &--gift-wrapping {
+      padding-top: 52px;
+
+      &::before {
+        top: -2px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantures {
+    .padding-y(53px; 58px);
+  }
+
+  .advantures__list {
+    grid-template-columns: 350px auto;
+    row-gap: 30px;
   }
 }
