@@ -1,9 +1,12 @@
 .review__text {
+  margin: 0 0 33px 0;
   .text(15px; 30px);
   color: @black-light;
 }
 
 .review__author {
+  display: block;
+  margin-bottom: 4px;
   line-height: 24px;
   font-style: normal;
 }
@@ -11,4 +14,35 @@
 .review__link {
   line-height: 30px;
   color: @black-light;
+}
+
+@media (min-width: @tablet-width) {
+  .review__text {
+    font-size: 17px;
+    margin-bottom: 60px;
+  }
+
+  .review__text-br {
+    display: none;
+  }
+
+  .review__author {
+    max-width: 60%;
+    font-size: 18px;
+  }
+
+  .review__link {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review__text {
+    max-width: 805px;
+    margin-bottom: 45px;
+  }
+
+  .review__author {
+    font-size: 17px;
+  }
 }

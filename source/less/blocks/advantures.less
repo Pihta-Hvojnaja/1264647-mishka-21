@@ -1,5 +1,5 @@
 .advantures {
-  .padding-y(33px; 31px);
+  .padding-y(33px; 30px);
 }
 
 .advantures__wrapper {
@@ -21,8 +21,11 @@
 
 .advantures__item {
   position: relative;
-  margin-bottom: 29px;
   padding-top: 55px;
+
+  &:not(:last-child) {
+    margin-bottom: 29px;
+  }
 
   &::before {
     .pseudo();
@@ -175,7 +178,7 @@
 
 @media (min-width: @desktop-width) {
   .advantures {
-    .padding-y(53px; 58px);
+    .padding-y(53px; 30px);
   }
 
   .advantures__list {

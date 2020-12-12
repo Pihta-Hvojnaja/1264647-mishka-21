@@ -4,7 +4,29 @@
 
 .address-site__email {
   display: inline-block;
+  min-width: 180px;
+  line-height: 22px;
   color: @black-light;
   vertical-align: middle;
   border-bottom: 1px solid @color-email-line;
+
+  &:hover {
+    color: @green-dark-hover;
+    border-color: @green-dark-hover;
+  }
+
+  &:active {
+    border-color: fade(@green-dark-hover, 10%);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 2px;
+    line-height: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 2px;
+    padding-bottom: 2px;
+    line-height: 30px;
+  }
 }

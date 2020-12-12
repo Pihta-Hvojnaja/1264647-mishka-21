@@ -7,7 +7,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .block-size(527px; 457px);
+    .block-size(527px; 400px);
   }
 }
 
@@ -19,14 +19,27 @@
   border: none;
 
   @media (max-width: @tablet-width - 1px) {
-    right: -30px;
+    right: -15px;
     min-width: 320px;
     width: calc(100% + 60px);
+
+    &--iframe {
+      right: -30px;
+    }
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
-    right: -50px;
+    right: -25px;
     min-width: 768px;
     width: calc(100% + 100px);
+
+    &--iframe {
+      right: -50px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 527px;
+    min-height: 457px;
   }
 }

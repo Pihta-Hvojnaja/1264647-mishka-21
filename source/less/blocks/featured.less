@@ -2,6 +2,10 @@
   position: relative;
   .padding-y(31px; 41px);
 
+  &::after {
+    background-repeat: repeat-x;
+  }
+
   @media (max-width: @desktop-width) {
     &::after {
       .pseudo();
@@ -88,7 +92,6 @@
 
 .featured__button {
   width: 100%;
-  max-width: 334px;
 }
 
 @media (min-width: @mobile-width + 200px) and (max-width: @tablet-width - 1px) {
@@ -134,6 +137,7 @@
 
   .featured__img {
     position: absolute;
+    max-width: 334px;
   }
 
   .featured__price {
@@ -243,6 +247,10 @@
     grid-row-end: -1;
     width: 525px;
     min-height: 612px;
+  }
+
+  .featured__img {
+    max-width: 525px;
   }
 
   .featured__footer {

@@ -193,10 +193,11 @@
             <ul class="slider__list">
               <li class="slider__item slider__item--visible">
                 <blockquote class="review slider__review">
-                  <p class="review__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
-                    у популярных инстамамочек.
-                    В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-                    и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                  <p class="review__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как <br class="review__text-br">
+                    у популярных инстамамочек. <br class="review__text-br">
+                    В отчаянии, я накупила аксессуаров и игрушек в Мишке, <br class="review__text-br">
+                    и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                  </p>
 
                   <cite class="review__author"><b>Анастасия Красильникова</b></cite>
                   <a class="review__link" href="#">@misssssiskras</a>
@@ -207,7 +208,8 @@
                 <blockquote class="review">
                   <p class="review__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
                     и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
-                    больше лайков!</p>
+                    больше лайков!
+                  </p>
 
                   <cite class="review__author"><b>Екатерина Красильникова</b></cite>
                   <a class="review__link" href="#">@misssssiskras2</a>
@@ -216,13 +218,13 @@
             </ul>
 
             <div class="slider__buttons">
-              <button class="slider__btn slider__btn--prev" type="button">
+              <button class="reaction slider__btn slider__btn--prev" type="button">
                 <span class="hidden">
                   Предыдущий отзыв
                 </span>
               </button>
 
-              <button class="slider__btn slider__btn--next" type="button">
+              <button class="reaction slider__btn slider__btn--next" type="button">
                 <span class="hidden">
                   Следующий отзыв
                 </span>
@@ -236,10 +238,10 @@
 
       <section class="contacts container">
         <div class="contacts__wrapper ">
-          <h2 class="title title--contacts">Контакты</h2>
+          <h2 class="title title--contacts contacts__title">Контакты</h2>
 
           <dl class="contact contacts__contact">
-            <div class="contact_wrapper">
+            <div class="contact__wrapper">
               <dt class="contact__term">
                 e-mail:
               </dt>
@@ -252,22 +254,30 @@
               </dd>
             </div>
 
-            <div class="contact_wrapper">
+            <div class="contact__wrapper">
               <dt class="contact__term">
                 адрес:
               </dt>
               <dd class="contact__definition">
-                г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101
+                г. Санкт-Петербург <br> ул. Большая Конюшенная <br> д. 19/8, офис 101
               </dd>
             </div>
           </dl>
         </div>
 
         <div class="map contacts__map">
-          <img class="map__item" src="../img/map_1.jpg" width="320" height="455" alt="Магазин Mishka по адресу: г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+          <div class="map__item">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/map_desktop.jpg 1x, img/map_desktop.@2x.jpg 2x">
+              <source media="(min-width: 700px)" srcset="img/map_tablet.jpg 1x, img/map_tablet.@2x.jpg 2x">
+              <source media="(min-width: 470px)" srcset="img/map_desktop.jpg 1x, img/map_desktop.@2x.jpg 2x">
+              <img class="map__item" src="img/map_mobile.jpg" srcset="img/map_mobile.jpg 1x, img/map_mobile@2x.jpg 2x" alt="Магазин Mishka по адресу: г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+            </picture>
+          </div>
 
-          <iframe class="map__item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056438!2d30.320853351321308!3d59.93871916896568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1605470036787!5m2!1sru!2sru"
-            width="320" height="455"></iframe>
+          <iframe class="map__item map__item--iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056438!2d30.320853351321308!3d59.93871916896568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1605470036787!5m2!1sru!2sru"
+            width="320" height="455">
+          </iframe>
         </div>
 
         <a class="button contacts__to-write" href="#">НАПИШИТЕ НАМ</a>
