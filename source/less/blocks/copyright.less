@@ -1,4 +1,31 @@
+.copyright {
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 3px;
+  }
+}
+
 .copyright__link {
+  .flex();
+  justify-content: center;
+  align-items: center;
+  max-width: 260px;
+  margin: 0 auto;
+  .padding-y(23px; 23px);
   .text(19px; 18px);
   color: @black;
+
+  b {
+    padding-bottom: 4px;
+    margin-right: 27px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 21px;
+  }
+}
+
+.copyright__svg {
+  fill: @green-light;
 }

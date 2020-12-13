@@ -1,8 +1,31 @@
+.social {
+  border-bottom: 1px solid @color-social-line;
+}
+
 .social__list {
   .flex();
+  justify-content: center;
+  align-items: center;
+  max-width: 260px;
   .reset-list();
+  margin: 0 auto;
 }
 
 .social__item:not(:last-child) {
   margin-right: 40px;
+}
+
+.social__link {
+  display: block;
+  .padding-y(27px; 22px);
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    border: none;
+  }
+
+  .social__link {
+    padding-top: 22px;
+  }
 }

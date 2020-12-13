@@ -9,7 +9,7 @@
   <body class="page-body">
     <!-- HEADER -->
     <header class="page-header">
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--nojs">
         <div class="main-nav__top">
           <a class="main-nav__logo">
             <picture>
@@ -85,7 +85,7 @@
       </nav>
     </header>
     <!-- MAIN -->
-    <main class="page-main">
+    <main class="page-main page-main--index">
       <div class="page-main__wrapper">
         <h1 class="title title--main-heading page-main__heading">Милые штуки ручной <br> работы для дома</h1>
 
@@ -205,8 +205,8 @@
               </li>
 
               <li class="slider__item">
-                <blockquote class="review">
-                  <p class="review__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
+                <blockquote class="review slider__review">
+                  <p class="review__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
                     и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
                     больше лайков!
                   </p>
@@ -287,7 +287,9 @@
     <footer class="page-footer">
       <div class="container page-footer__wrapper">
         <a class="page-footer__logo" href="index.html">
-          <img class="logo" src="img/logotype_mobile.svg"  alt="Логотип магазина в виде слова Mishka">
+          <svg class="page-footer__svg-logo" role="img" width="102" height="34" viewBox="0 0 102 34" aria-label="Логотип магазина в виде слова Mishka">
+            <use xlink:href="img/sprite.svg#logo_footer"></use>
+          </svg>
         </a>
 
         <section class="social">
@@ -295,26 +297,29 @@
 
           <ul class="social__list">
             <li class="social__item">
-              <a href="#">
+              <a class="social__link page-footer__link" href="#">
                 <span class="hidden">Мы в Instagram</span>
-                <!-- img - временное решение -->
-                <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="">
+                <svg class="page-footer__svg"  width="22" height="22" viewBox="0 0 22 22">
+                  <use xlink:href="img/sprite.svg#insta"></use>
+                </svg>
               </a>
             </li>
 
             <li class="social__item">
-              <a href="#">
+              <a class="social__link social__link--fb page-footer__link" href="#">
                 <span class="hidden">Мы в Facebook</span>
-                <!-- img - временное решение -->
-                <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="">
+                <svg class="page-footer__svg" width="15" height="28" viewBox="0 0 15 28">
+                  <use xlink:href="img/sprite.svg#fb"></use>
+                </svg>
               </a>
             </li>
 
             <li class="social__item">
-              <a href="#">
+              <a class="social__link page-footer__link" href="#">
                 <span class="hidden">Мы в Twitter</span>
-                <!-- img - временное решение -->
-                <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="">
+                <svg class="page-footer__svg" width="23" height="20" viewBox="0 0 23 20">
+                  <use xlink:href="img/sprite.svg#twitter"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -323,41 +328,45 @@
         <section class="copyright">
           <h2 class="hidden">Разработчик сайта</h2>
 
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="copyright__link page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
             <b>Разработано</b>
-            <!-- img - временное решение -->
-            <img class="copyright__logo" src="https://via.placeholder.com/27x35" width="27" height="35" alt="">
+            <svg class="copyright__svg page-footer__svg" width="27" height="35" viewBox="0 0 27 35">
+              <use xlink:href="img/sprite.svg#html_academy"></use>
+            </svg>
           </a>
         </section>
       </div>
     </footer>
 
     <div class="modal page-body__modal">
-      <h2 class="title modal__heading">Добавить в корзину</h2>
+      <div class="modal__wrapper">
+        <h2 class="title modal__heading">Добавить в корзину</h2>
 
-      <p class="modal__instruction">Выберите размер:</p>
+        <p class="modal__instruction">Выберите размер:</p>
 
-      <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+          <ul class="modal__list">
+            <li class="modal__item">
+              <input class="modal__control hidden" id="s" type="radio" name="size" value="S" checked>
+              <label class="modal__label" for="s">S</label>
+            </li>
 
-        <ul class="modal__list">
-          <li class="modal__item">
-            <input class="modal__control hidden" id="s" type="radio" name="size" value="S" checked>
-            <label class="modal__label" for="s">S</label>
-          </li>
+            <li class="modal__item">
+              <input class="modal__control hidden" id="m" type="radio" name="size" value="M">
+              <label class="modal__label" for="m">M</label>
+            </li>
 
-          <li class="modal__item">
-            <input class="modal__control hidden" id="m" type="radio" name="size" value="M">
-            <label class="modal__label" for="m">M</label>
-          </li>
+            <li class="modal__item">
+              <input class="modal__control hidden" id="l" type="radio" name="size" value="L">
+              <label class="modal__label" for="l">L</label>
+            </li>
+          </ul>
 
-          <li class="modal__item">
-            <input class="modal__control hidden" id="l" type="radio" name="size" value="L">
-            <label class="modal__label" for="l">L</label>
-          </li>
-        </ul>
-
-        <button class="modal__add" type="submit">ДОБАВИТЬ</button>
-      </form>
+          <button class="modal__add" type="submit">ДОБАВИТЬ</button>
+        </form>
+      </div>
     </div>
+
+    <script src="js/scripts.js"></script>
   </body>
 </html>
