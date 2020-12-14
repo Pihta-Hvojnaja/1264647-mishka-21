@@ -1,12 +1,12 @@
 .featured {
   position: relative;
-  .padding-y(31px; 41px);
+  .padding-y(32px; 41px);
 
   &::after {
     background-repeat: repeat-x;
   }
 
-  @media (max-width: @desktop-width) {
+  @media (max-width: @desktop-width - 1px) {
     &::after {
       .pseudo();
       right: 0;
@@ -70,7 +70,7 @@
 }
 
 .featured__wrapper-img {
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .featured__img {
@@ -92,13 +92,6 @@
 
 .featured__button {
   width: 100%;
-}
-
-@media (min-width: @mobile-width + 200px) and (max-width: @tablet-width - 1px) {
-  .featured__header,
-  .featured__description {
-    text-align: center;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -202,8 +195,9 @@
       .pseudo();
       right: 0;
       bottom: -95px;
+      min-width: 1050px;
       width: 100%;
-      height: 23px;
+      height: 24px;
       background-image: url("../img/zigzag_line_desktop.svg");
       background-size: contain;
     }
@@ -260,7 +254,7 @@
   }
 
   .featured__price {
-    margin-bottom: 32px;
+    margin-bottom: 34px;
     padding-right: 0;
   }
 }

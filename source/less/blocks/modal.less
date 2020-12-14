@@ -57,6 +57,14 @@
   display: block;
   .padding-y(17px; 15px);
   border: 2px solid fade(@black-light, 10%);
+
+  &:hover {
+    border-color: fade(@black-light, 30%);
+  }
+
+  &:active {
+    border-color: @color-email-line;
+  }
 }
 
 .modal__control:checked + .modal__label {

@@ -1,5 +1,5 @@
 .advantures {
-  .padding-y(33px; 30px);
+  .padding-y(32px; 30px);
 }
 
 .advantures__wrapper {
@@ -24,7 +24,7 @@
   padding-top: 55px;
 
   &:not(:last-child) {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
 
   &::before {
@@ -79,6 +79,8 @@
   }
 
   &--gift-wrapping {
+    padding-top: 57px;
+
     &::before {
       top: 3px;
       left: 3px;
@@ -88,22 +90,9 @@
   }
 }
 
-@media (min-width: @mobile-width + 20px) and (max-width: @tablet-width - 1px) {
-  .advantures__heading,
-  .advantures__item {
-    text-align: center;
-
-    &::before {
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-    }
-  }
-}
-
-@media (min-width: @tablet-width) {
+@media (min-width: 568px) {
   .advantures {
-    .padding-y(55px; 55px);
+    .padding-y(55px; 57px);
   }
 
   .advantures__list {
@@ -179,10 +168,17 @@
 @media (min-width: @desktop-width) {
   .advantures {
     .padding-y(53px; 30px);
+    min-height: 620px;
   }
 
   .advantures__list {
     grid-template-columns: 350px auto;
     row-gap: 30px;
+  }
+
+  .advantures__item {
+    &--handmade {
+      padding-top: 55px;
+    }
   }
 }

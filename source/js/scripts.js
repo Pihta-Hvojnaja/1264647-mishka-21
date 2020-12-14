@@ -71,10 +71,10 @@ if (main.classList.contains('page-main--index')) {
   orderButton.addEventListener ('click', function(evt) {
     evt.preventDefault();
 
-    modal.classList.toggle('modal--show');
+    modal.classList.add('modal--show');
   });
 
-  orderButton.addEventListener ('keydown', function(evt) {
+  window.addEventListener ('keydown', function(evt) {
     if (evt.keyCode === 27) {
       modal.classList.remove('modal--show');
     }
