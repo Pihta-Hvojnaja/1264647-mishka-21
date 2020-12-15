@@ -15,16 +15,20 @@ a {
 
 .hidden {
   position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
   width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-.container-nav {
+.container {
   min-width: 320px;
+  padding: 0 30px;
 
   @media (min-width: @tablet-width) {
     padding: 0 50px;
@@ -36,12 +40,22 @@ a {
   }
 }
 
-.container {
-  min-width: 320px;
-  padding: 0 30px;
+.reaction {
+  &:hover {
+    opacity: 0.6;
+  }
 
-  .container-nav;
+  &:active {
+    opacity: 0.3;
+  }
 }
+
+/*.focus:focus:not(:active) {
+  outline: none;
+  box-shadow:
+    0 0 0 4px @white,
+    0 1px 1px 5px @black-light;
+}*/
 
 /*
 @media (min-width: @mobile-width) {}

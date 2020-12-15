@@ -1,9 +1,24 @@
 .button {
+  max-width: 334px;
+  padding: 14px;
   .text(18px; 20px);
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   color: @black-light;
   background-color: transparent;
-  //border: 2px solid @black-light;
+  border: 2px solid @black-light;
+
+  &:hover {
+    color: @white;
+    background-color: @black-light;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    .text(17px; 20px);
+  }
 }

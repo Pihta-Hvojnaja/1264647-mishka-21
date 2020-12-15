@@ -1,22 +1,9 @@
 .slider {
   position: relative;
+}
 
-  @media (min-width: @desktop-width) {
-    .padding-y(78px; 186px);
-    background-image: url("../img/review.jpg");
-    background-repeat: no-repeat;
-    background-position: left top;
-
-    &::after {
-      .pseudo();
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 23px;
-      background-image: url("../img/zigzag_line_desktop.svg");
-      background-size: contain;
-    }
-  }
+.slider__heading {
+  margin: 0 0 14px 0;
 }
 
 .slider__list {
@@ -25,6 +12,7 @@
 
 .slider__item {
   display: none;
+  margin-bottom: 30px;
 }
 
 .slider__item--visible {
@@ -38,44 +26,97 @@
 .slider__buttons {
   .flex();
   justify-content: space-between;
+  max-width: 334px;
+  margin: 0 auto 36px auto;
+  border: 1px solid @color-card-line;
 }
 
 .slider__btn {
-  .block-size(50px; 26px);
+  flex-grow: 1;
+  height: 50px;
+  padding: 0;
   background-color: transparent;
   background-image: url("data:image/svg+xml,%3Csvg width='50' height='26' viewBox='0 0 50 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z' fill='black'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: center;
   border: none;
+
+  &--prev {
+    background-position: 37px 11px;
+    border-right: 1px solid @color-card-line;
+  }
+
+  &--next {
+    background-position: 41px 13px;
+    transform: rotate(-180deg);
+  }
 }
 
-.slider__btn--next {
-  transform: rotate(180deg);
+.slider__to-write {
+  display: block;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
+  .slider__heading {
+    margin: 0 0 38px 0;
+  }
+
   .slider__buttons {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -35px;
     width: 176px;
+    border: none;
   }
 
   .slider__btn {
+    flex-grow: 0;
     padding: 19px;
-    width: 88px;
+    width: 50%;
+
+    &--prev {
+      background-position: 20px 10px;
+      border-right: none;
+    }
+
+    &--next {
+      background-position: 18px 14px;
+    }
   }
 
   .slider__to-write {
     position: absolute;
-    top: 0;
+    top: -5px;
     right: 0;
+    padding: 15px 38px 13px 38px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .slider {
+    .padding-y(78px; 156px);
+    padding-left: 174px;
+    background-image: url("../img/review.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    &::after {
+      .pseudo();
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/zigzag_line_desktop.svg");
+      background-size: contain;
+    }
+  }
+
+  .slider__heading {
+    margin: 0 0 35px 0;
+  }
+
   .slider__buttons {
-    bottom: 186px;
+    bottom: 153px;
   }
 
   .slider__to-write {
