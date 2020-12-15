@@ -1,0 +1,123 @@
+.top-main {
+  background-color: @grey-light;
+}
+
+.top-main--index {
+  position: relative;
+  .flex();
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 72px;
+  min-height: 489px;
+  background-color: @color-background-catalog;
+  background-image: url("../img/hero_mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center -20px;
+  background-size: cover auto;
+  border-top: 1px solid @color-card-line;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero_mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+}
+
+.top-main--form {
+  min-height: 176px;
+  padding-top: 72px;
+}
+
+.top-main__heading {
+  max-width: 100%;
+  padding: 0 35px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.top-main__catalog-nav {
+  .reset-list();
+}
+
+@media (min-width: @tablet-width) {
+  .top-main {
+
+    &::after {
+      .pseudo();
+      right: 0;
+      bottom: -10px;
+      min-width: 100%;
+      height: 24px;
+      background-image: url("../img/zigzag_fill_desktop.svg");
+      background-repeat: repeat-x;
+    }
+  }
+
+  .top-main--index {
+    min-height: 678px;
+    padding-top: 87px;
+    background-image: url("../img/hero_desktop.jpg");
+    background-position: -7px -68px;
+    border: none;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero_desktop@2x.jpg");
+      background-size: 768px auto;
+    }
+  }
+
+  .top-main__heading {
+    padding-left: 28px;
+    max-width: 80%;
+  }
+}
+
+@media (min-width: @tablet-width + 1px) {
+  .top-main--index {
+    background-position: center -68px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .top-main {
+
+    &::after {
+      right: 14px;
+      bottom: -14px;
+      min-width: 1250px;
+      width: 100%;
+      height: 34px;
+      background-size: cover;
+    }
+  }
+
+  .top-main--index {
+    padding-top: 90px;
+    background-size: 768px auto;
+    background-position: 184px -70px;
+  }
+
+  .top-main__heading {
+    padding-left: 35px;
+  }
+
+  .top-main__catalog-nav {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width + 1px) {
+  .top-main {
+    &::after {
+      right: 14px;
+      bottom: -14px;
+      min-width: 1250px;
+      width: 100%;
+      height: 34px;
+      background-size: auto 100%;
+    }
+  }
+
+  .top-main--index {
+    background-position: center -70px;
+  }
+}

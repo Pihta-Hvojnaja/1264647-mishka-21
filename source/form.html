@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="page-body">
-
-  <header class="page-header container-nav">
-    <nav class="main-nav main-nav--opened main-nav--nojs">
-      <div class="main-nav__wrapper">
-        <a class="main-nav__logo" href="index.html">
+  <!-- HEADER -->
+  <header class="page-header">
+    <nav class="main-nav main-nav--nojs">
+      <div class="main-nav__top">
+        <a class="reaction  main-nav__logo" href="index.html">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/logotype_desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logotype_tablet.svg">
@@ -19,66 +19,75 @@
           </picture>
         </a>
 
-        <button class="main-nav__toggle" type="button">
+        <button class="focus main-nav__toggle" type="button">
           <span class="hidden">Открыть меню</span>
         </button>
       </div>
 
-      <ul class="site-list main-nav__list">
-        <li class="site-list__item main-nav__item">
-          <a class="site-list__link main-nav__link" href="catalog.html">
+      <ul class="site-list-top main-nav__list-top">
+        <li class="site-list-top__item main-nav__item">
+          <a class="reaction focus site-list-top__link" href="catalog.html">
             Каталог товаров
           </a>
         </li>
 
-        <li class="site-list__item main-nav__item">
-          <a class="site-list__link main-nav__link">
+        <li class="site-list-top__item main-nav__item">
+          <a class="site-list-top__link">
             Вязание на заказ
-          </a>
-        </li>
-
-        <li class="site-list__item main-nav__item">
-          <a class="site-list__link" href="#">
-            Новые поступления
-          </a>
-        </li>
-
-        <li class="site-list__item main-nav__item">
-          <a class="site-list__link" href="#">
-            Распродажа
           </a>
         </li>
       </ul>
 
-      <form class="search main-nav__search" action="https://echo.htmlacademy.ru" method="get">
-        <div class="search__wrapper">
-          <label class="hidden" for="search">Найти на сайте</label>
-          <input class="search__control" id="search" type="search" name="search" placeholder="Поиск по сайту">
+      <div class="main-nav__middle">
+        <form class="search main-nav__search" action="https://echo.htmlacademy.ru" method="get">
+          <div class="search__wrapper">
+            <button class="search__submit" type="submit">
+              <span class="hidden">Найти</span>
 
-          <button class="search__submit" type="submit">
-            <span class="hidden">Найти</span>
+              <svg class="search__svg"  width="18" height="18" viewBox="0 0 18 18">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
 
-            <svg width="18" height="18" viewBox="0 0 18 18">
-              <path d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z"
-                fill="black"/>
+            <input class="search__control" id="search" type="search" name="search" placeholder="Поиск по сайту">
+            <label class="hidden" for="search">Найти на сайте</label>
+          </div>
+        </form>
+
+        <p class="cart main-nav__cart">
+          <a class="cart__link" href="#">
+            <svg class="cart__svg" width="21" height="18">
+              <use xlink:href="img/sprite.svg#cart"></use>
             </svg>
-          </button>
-        </div>
-      </form>
 
-      <p class="cart main-nav__cart">
-        <a class="cart__link main-nav__link" href="#">
-          Корзина: <span>пока пуста</span>
-        </a>
-      </p>
+            <span>Корзина: пока пуста</span>
+          </a>
+        </p>
+      </div>
 
-      <p class="extra-info main-nav__extra-info">Бесплатная доставка по России</p>
+      <div class="main-nav__bottom">
+        <ul class="site-list-bottom main-nav__list-bottom">
+          <li class="site-list-bottom__item main-nav__item">
+            <a class="reaction site-list-bottom__link" href="#">
+              Новые поступления
+            </a>
+          </li>
+
+          <li class="site-list-bottom__item main-nav__item">
+            <a class="reaction site-list-bottom__link" href="#">
+              Распродажа
+            </a>
+          </li>
+        </ul>
+
+        <p class="extra-info main-nav__extra-info">Бесплатная доставка по России</p>
+      </div>
     </nav>
   </header>
-
+  <!-- MAIN -->
   <main class="page-main">
-    <div class="page-main__wrapper">
-      <h1 class="title title--main-heading page-main__heading">Вязание на заказ</h1>
+    <div class="top-main top-main--form">
+      <h1 class="title title--main-heading top-main__heading">Вязание на заказ</h1>
     </div>
 
     <div class="container">
@@ -98,9 +107,9 @@
               <label class="form__label form__label--radio" for="accessories">Аксессуар для интерьера</label>
             </li>
 
-            <li class="form__item">
+            <li class="form__item form__item--type">
               <input class="hidden form__control" id="toy" type="radio" name="type" value="toy">
-              <label class="form__label" for="toy">Детская игрушка</label>
+              <label class="form__label form__label--radio" for="toy">Детская игрушка</label>
             </li>
           </ul>
         </div>
@@ -108,7 +117,7 @@
 
       <fieldset class="form__fieldset">
         <div class="container form__container">
-          <h2 class="form__legend">ЦВЕТ</h2>
+          <h2 class="form__legend form__legend--color">ЦВЕТ</h2>
 
           <ul class="form__list form__list--color">
             <li class="form__item form__item--color">
@@ -207,8 +216,10 @@
 
   <footer class="page-footer">
     <div class="container page-footer__wrapper">
-      <a class="logo page-footer__logo" href="index.html">
-        <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина в виде слова Mishka">
+      <a class="page-footer__logo" href="index.html">
+        <svg class="page-footer__svg-logo" role="img" width="102" height="34" viewBox="0 0 102 34" aria-label="Логотип магазина в виде слова Mishka">
+          <use xlink:href="img/sprite.svg#logo_footer"></use>
+        </svg>
       </a>
 
       <section class="social">
@@ -216,26 +227,29 @@
 
         <ul class="social__list">
           <li class="social__item">
-            <a href="#">
+            <a class="social__link page-footer__link" href="#">
               <span class="hidden">Мы в Instagram</span>
-              <!-- img - временное решение -->
-              <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="">
+              <svg class="page-footer__svg"  width="22" height="22" viewBox="0 0 22 22">
+                <use xlink:href="img/sprite.svg#insta"></use>
+              </svg>
             </a>
           </li>
 
           <li class="social__item">
-            <a href="#">
+            <a class="social__link social__link--fb page-footer__link" href="#">
               <span class="hidden">Мы в Facebook</span>
-              <!-- img - временное решение -->
-              <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="">
+              <svg class="page-footer__svg" width="15" height="28" viewBox="0 0 15 28">
+                <use xlink:href="img/sprite.svg#fb"></use>
+              </svg>
             </a>
           </li>
 
           <li class="social__item">
-            <a href="#">
+            <a class="social__link page-footer__link" href="#">
               <span class="hidden">Мы в Twitter</span>
-              <!-- img - временное решение -->
-              <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="">
+              <svg class="page-footer__svg" width="23" height="20" viewBox="0 0 23 20">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -244,10 +258,11 @@
       <section class="copyright">
         <h2 class="hidden">Разработчик сайта</h2>
 
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
           <b>Разработано</b>
-          <!-- img - временное решение -->
-          <img class="copyright__logo" src="https://via.placeholder.com/27x35" width="27" height="35" alt="">
+          <svg class="copyright__svg page-footer__svg" width="27" height="35" viewBox="0 0 27 35">
+            <use xlink:href="img/sprite.svg#html_academy"></use>
+          </svg>
         </a>
       </section>
     </div>
