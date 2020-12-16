@@ -84,10 +84,38 @@
       left: 11px;
       margin: auto 0;
       box-sizing: content-box;
-      .block-size(16.5px; 16.5px);
-      border-radius: 50%;
+      .block-size(16px; 16px);
       background-color: @white;
-      box-shadow: 0 0 0 10px @white, 0 0 0 12px @black-light;
+      border: 10px solid @white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px @black-light;
+    }
+
+    &:hover {
+      color: @color-email-line;
+    }
+
+    &:active {
+      color: fade(@black, 30%);
+    }
+
+    &:hover::before {
+      box-shadow: 0 0 0 2px @color-email-line;
+    }
+
+    &:active::before {
+      box-shadow: 0 0 0 2px fade(@black, 30%);
+    }
+  }
+// остановился тут
+  &--checkbox {
+    &::before {
+      .pseudo();
+      top: 0;
+      bottom: 0;
+      left: 11px;
+      margin: auto 0;
+      box-sizing: content-box;
     }
   }
 }
