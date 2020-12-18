@@ -1,12 +1,18 @@
 .form {
-  .padding-y(14px; 20px);
+  max-width: 600px;
+  margin: 0 auto;
+  .padding-y(14px; 55px);
 }
 
 .form__fieldset {
+  width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
   border: none;
+
+  &--textarea {
+    margin-bottom: 17px;
+  }
 }
 
 .form__container {
@@ -38,6 +44,23 @@
   &--initials::after {
     margin-left: 18px;
   }
+
+  &--phone,
+  &--email {
+    margin-bottom: 3px;
+  }
+
+  &--phone::after {
+    margin-left: 28px;
+  }
+
+  &--email::after {
+    margin-left: 20px;
+  }
+
+  &--textarea {
+    margin-bottom: 20px;
+  }
 }
 
 .form__list {
@@ -50,7 +73,7 @@
   }
 
   &--initials {
-    padding-top: 19px;
+    .padding-y(19px; 31px);
   }
 }
 
@@ -72,22 +95,70 @@
   }
 }
 
+.form__wrapper-control {
+  position: relative;
+}
+
 .form__control {
   height: 52px;
   font-family: @font-family;
   .text(17px; 18px);
+  color: @black-light;
+  background-color: transparent;
   border: none;
-  box-shadow: inset 0 -2px 0 @black;
+  border-bottom: 2px solid @black;
 
   &--name,
   &--text,
   &--textarea {
     width: 100%;
+
+    &:hover,
+    &:active {
+      border-color: @color-email-line;
+    }
   }
 
   &--contacts {
     display: block;
     width: 100%;
+    margin-bottom: 35px;
+    padding-right: 50px;
+
+    &:hover,
+    &:active {
+      border-color: @color-email-line;
+    }
+  }
+
+  &--textarea {
+    height: 142px;
+    padding: 16px;
+    color: @black;
+    border: 2px solid @black-light;
+    resize: none;
+  }
+}
+
+.form__control:hover + .form__svg,
+.form__control:active + .form__svg,
+.form__control:focus + .form__svg {
+  opacity: 1;
+  fill: @color-email-line;
+}
+
+.form__svg {
+  position: absolute;
+  opacity: 0.2;
+
+  &--phone {
+    top: 12px;
+    right: 7px;
+  }
+
+  &--email {
+    top: 16px;
+    right: 3px;
   }
 }
 
@@ -189,11 +260,16 @@
 }
 
 .form__footnote {
+  margin: 0 0 30px 0;
   .text(14px; 16px);
   color: @black-light;
 }
 
 .form__submit {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
   .text(17px; 16px);
 }
 

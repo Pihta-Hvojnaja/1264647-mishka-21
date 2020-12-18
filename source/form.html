@@ -184,25 +184,28 @@
 
       <fieldset class="form__fieldset">
         <div class="container form__container">
-          <label class="form__legend form__legend--contacts">
-            ТЕЛ
-            <input class="form__control form__control--contacts form__control--phone" type="tel" name="phone" pattern="\+7[0-9]{10}|8[0-9]{10}" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-          </label>
+          <label class="form__legend form__legend--phone" for="phone">ТЕЛ</label>
+          <div class="form__wrapper-control">
+            <input class="form__control form__control--contacts" id="phone" type="tel" name="phone" pattern="\+7[0-9]{10}|8[0-9]{10}" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            <svg class="form__svg form__svg--phone" width="25" height="24" viewBox="0 0 25 24">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+          </div>
 
-          <label class="form__legend form__legend--contacts">
-            E-MAIL
-            <input class="form__control form__control--contacts form__control--email" type="email" name="email" placeholder="Ваш Email*" required>
-          </label>
+          <label class="form__legend form__legend--email" for="email">E-MAIL</label>
+          <div class="form__wrapper-control">
+            <input class="form__control form__control--contacts" id="email" type="email" name="email" placeholder="Ваш Email*" required>
+            <svg class="form__svg form__svg--email" width="32" height="21" viewBox="0 0 32 21">
+              <use xlink:href="img/sprite.svg#mail"></use>
+            </svg>
+          </div>
         </div>
       </fieldset>
 
-
       <div class="container form__container">
-        <fieldset class="form__fieldset">
-          <label class="form__legend form__label" for="letter">
-            ДОП
-            <textarea class="form__control form__control--textarea" id="letter" name="letter" rows="5" autocomplete="off" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </label>
+        <fieldset class="form__fieldset form__fieldset--textarea">
+          <label class="form__legend form__legend--textarea form__label--text" for="letter">ДОП</label>
+          <textarea class="form__control form__control--textarea" id="letter" name="letter" rows="5" autocomplete="off" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
 
         <p class="form__footnote">
