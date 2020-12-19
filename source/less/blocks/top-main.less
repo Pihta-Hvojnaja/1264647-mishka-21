@@ -1,5 +1,10 @@
 .top-main {
   background-color: @grey-light;
+
+  &--no-index {
+    min-height: 176px;
+    padding-top: 72px;
+  }
 }
 
 .top-main--index {
@@ -20,11 +25,6 @@
     background-image: url("../img/hero_mobile@2x.jpg");
     background-size: 320px auto;
   }
-}
-
-.top-main--form {
-  min-height: 176px;
-  padding-top: 72px;
 }
 
 .top-main__heading {
@@ -49,6 +49,17 @@
       background-image: url("../img/zigzag_fill_desktop.svg");
       background-repeat: repeat-x;
     }
+
+    &--no-index {
+      position: relative;
+      min-height: 168px;
+      padding-top: 33px;
+
+      &::after {
+        right: 0;
+        bottom: -1px;
+      }
+    }
   }
 
   .top-main--index {
@@ -67,6 +78,10 @@
   .top-main__heading {
     padding-left: 28px;
     max-width: 80%;
+
+    &--no-index {
+      padding-left: 36px;
+    }
   }
 }
 
