@@ -10,22 +10,11 @@
   padding: 29px 30px 26px 76px;
   color: @black;
 
-  .cart__svg {
-    fill: @black;
-    opacity: 0.2;
-  }
-
-  &:hover .cart__svg {
-    fill: @green-light;
-    opacity: 1;
-  }
-
   &:hover span {
     opacity: 0.6;
   }
 
-  &:active span,
-  &:active .cart__svg {
+  &:active span {
     fill: @green-light;
     opacity: 0.3;
   }
@@ -44,6 +33,22 @@
   left: 30px;
   margin: auto;
   box-shadow: none;
+  fill: @black;
+  opacity: 0.2;
+}
+
+.cart__svg--catalog {
+  position: static;
+}
+
+a:hover .cart__svg {
+  fill: @green-light;
+  opacity: 1;
+}
+
+a:active .cart__svg {
+  fill: @green-light;
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

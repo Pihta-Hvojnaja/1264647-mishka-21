@@ -1,3 +1,21 @@
+.cards {
+  .padding-y(29px; 32px);
+}
+
+.cards__item {
+  &:not(:last-child) {
+    margin-bottom: 31px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px fade(@black, 10%);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px fade(@black, 10%);
+  }
+}
+
 @media (min-width: @desktop-width) {
   .cards {
     .flex();
