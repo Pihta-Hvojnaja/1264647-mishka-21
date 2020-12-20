@@ -41,11 +41,12 @@
 
 .form__list {
   .reset-list();
-  .padding-y(22px; 40px);
+  .padding-y(14px; 25px);
 
   &--color {
     max-width: 80%;
     padding-bottom: 41px;
+    .padding-y(6px; 25px);
   }
 
   &--initials {
@@ -120,12 +121,25 @@
   }
 }
 
+.form__label,
+.form__legend--contacts {
+  .flex();
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.form__legend--contacts {
+  width: 100%;
+}
+
 .form__label {
   position: relative;
 
   &--radio,
   &--checkbox {
-    padding-top: 3px;
+    align-items: center;
+    min-height: 52px;
+    padding-top: 2px;
     padding-left: 60px;
 
     &::before,
@@ -206,17 +220,6 @@
   }
 }
 
-.form__label,
-.form__legend--contacts {
-  .flex();
-  justify-content: space-between;
-  font-weight: 700;
-}
-
-.form__legend--contacts {
-  width: 100%;
-}
-
 .form__footnote {
   margin: 0 0 30px 0;
   .text(14px; 16px);
@@ -264,27 +267,9 @@
     }
   }
 
-  .form__list {
-    .reset-list();
-    .padding-y(22px; 40px);
-
-    &--color {
-      max-width: 80%;
-      padding-bottom: 41px;
-    }
-
-    &--initials {
-      .padding-y(19px; 31px);
-    }
-  }
-
   .form__item {
-    &--type:not(:last-child) {
-      margin-bottom: 22px;
-    }
-
     &--color:not(:last-child) {
-      margin-bottom: 40px;
+      margin-bottom: 9px;
     }
 
     &--initials {
@@ -308,10 +293,14 @@
   }
 
   .form__fieldset {
-    .padding-y(50px; 27px);
+    .padding-y(33px; 24px);
 
     &:nth-child(even) {
       background-color: @grey-light;
+    }
+
+    &--color {
+      .padding-y(50px; 27px);
     }
 
     &--initials {
@@ -320,12 +309,13 @@
 
     &--contacts {
       padding-top: 48px;
+      .padding-y(48px; 27px);
     }
 
     &--textarea {
       .flex();
       align-items: flex-start;
-      padding-bottom: 0;
+      .padding-y(50px; 0);
       margin-bottom: 52px;
     }
   }
@@ -341,6 +331,7 @@
 
   .form__legend {
     width: 170px;
+    padding-top: 18px;
 
     &--color {
       padding-top: 17px;
@@ -352,11 +343,7 @@
     }
 
     &--phone,
-    &--email {
-      width: 168px;
-      padding-top: 17px;
-    }
-
+    &--email,
     &--textarea {
       width: 168px;
       padding-top: 17px;
@@ -377,7 +364,7 @@
 
   .form__item {
     &--type:not(:last-child) {
-      margin-bottom: 59px;
+      margin-bottom: 24px;
     }
 
     &--color {
