@@ -3,8 +3,13 @@
 }
 
 .cards__item {
-  &:not(:last-child) {
-    margin-bottom: 31px;
+  width: 260px;
+  margin: 0 auto;
+
+  @media (max-width: @tablet-width - 1px) {
+    &:not(:last-child) {
+      margin-bottom: 31px;
+    }
   }
 
   &:hover {
@@ -14,15 +19,38 @@
   &:active {
     box-shadow: 0 3px 5px fade(@black, 10%);
   }
+
+  @media (min-width: 394px) {
+    width: 334px;
+  }
 }
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .cards {
+    .padding-y(68px; 54px);
+  }
+
+  .cards__item {
+    width: 668px;
+
+    &:not(:last-child) {
+      margin-bottom: 54px;
+    }
+  }
+}
+
 
 @media (min-width: @desktop-width) {
   .cards {
     .flex();
+    .padding-y(115px; 57px);
   }
 
   .cards__item {
-    &:not(:last-child) {
+    width: 316px;
+    margin: 0;
+
+    &:not(:nth-child(3n+3)) {
       margin-right: auto;
     }
   }

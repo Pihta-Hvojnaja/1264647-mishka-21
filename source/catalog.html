@@ -85,7 +85,7 @@
     </nav>
   </header>
   <!-- MAIN -->
-  <main class="page-main">
+  <main class="page-main page-main--modal">
 
     <div class="top-main top-main--no-index">
       <h1 class="title title--main-heading top-main__heading top-main__heading--no-index">Каталог товаров</h1>
@@ -213,7 +213,7 @@
 
             <source media="(min-width: 1150px)" srcset="img/video_desktop.jpg 1x, img/video_desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video_tablet.jpg 1x, img/video_tablet@2x.jpg 2x">
-            <img class="card__img" src="img/video_mobile.jpg" srcset="img/video_mobile.jpg 1x, img/video_mobile@2x.jpg 2x" alt="Зелено-серая вязаная корзинка">
+            <img class="video__img" src="img/video_mobile.jpg" srcset="img/video_mobile.jpg 1x, img/video_mobile@2x.jpg 2x" alt="Зелено-серая вязаная корзинка">
           </picture>
 
           <button class="video__button" type="button" aria-label="Кнопка: воспроизведение, пауза"></button>
@@ -284,5 +284,36 @@
       </section>
     </div>
   </footer>
+  <!-- MODAL -->
+  <div class="modal page-body__modal">
+    <div class="modal__wrapper">
+      <h2 class="title modal__heading">Добавить в корзину</h2>
+
+      <p class="modal__instruction">Выберите размер:</p>
+
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+        <ul class="modal__list">
+          <li class="modal__item">
+            <input class="modal__control hidden" id="s" type="radio" name="size" value="S" checked>
+            <label class="modal__label" for="s">S</label>
+          </li>
+
+          <li class="modal__item">
+            <input class="modal__control hidden" id="m" type="radio" name="size" value="M">
+            <label class="modal__label" for="m">M</label>
+          </li>
+
+          <li class="modal__item">
+            <input class="modal__control hidden" id="l" type="radio" name="size" value="L">
+            <label class="modal__label" for="l">L</label>
+          </li>
+        </ul>
+
+        <button class="modal__add" type="submit">ДОБАВИТЬ</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/scripts.js"></script>
 </body>
 </html>

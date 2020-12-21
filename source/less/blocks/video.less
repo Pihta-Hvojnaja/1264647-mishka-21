@@ -7,6 +7,15 @@
   }
 }
 
+.video__img {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .block-size(683px; 453px);
+  }
+}
+
 .video__button {
   position: absolute;
   top: 0;
@@ -27,5 +36,9 @@
   &:active {
     opacity: 0.3;
     transform: scale(0.8);
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 30px;
   }
 }

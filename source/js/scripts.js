@@ -64,19 +64,27 @@ if (main.classList.contains('page-main--index')) {
 // модальное окно
 const pageBody = document.querySelector('.page-body');
 
-if (main.classList.contains('page-main--index')) {
+if (main.classList.contains('page-main--modal')) {
   const modal = pageBody.querySelector('.modal');
-  const orderButton = main.querySelector('.featured__button');
-
-  orderButton.addEventListener ('click', function(evt) {
-    evt.preventDefault();
-
-    modal.classList.add('modal--show');
-  });
 
   window.addEventListener ('keydown', function(evt) {
     if (evt.keyCode === 27) {
       modal.classList.remove('modal--show');
     }
   });
+
+  const showModal = function(className) {
+    if (main.querySelector(className)) {
+      let orderButton = main.querySelector(className);
+
+      orderButton.addEventListener ('click', function(evt) {
+        evt.preventDefault();
+
+        modal.classList.add('modal--show');
+      });
+    }
+  };
+
+  showModal('.featured__button');
+  showModal('.cart__svg--catalog');
 }
