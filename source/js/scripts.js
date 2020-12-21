@@ -73,18 +73,25 @@ if (main.classList.contains('page-main--modal')) {
     }
   });
 
-  const showModal = function(className) {
-    if (main.querySelector(className)) {
-      let orderButton = main.querySelector(className);
+  if (main.querySelector('.featured__button')) {
+    let orderButton = main.querySelector('.featured__button');
 
-      orderButton.addEventListener ('click', function(evt) {
+    orderButton.addEventListener ('click', function(evt) {
+      evt.preventDefault();
+
+      modal.classList.add('modal--show');
+    });
+  }
+
+  if (main.querySelector('.cart__svg--catalog')) {
+    const orderButtons = main.querySelectorAll('.cart__svg--catalog');
+
+    for (let i = 0; i < orderButtons.length; i++) {
+      orderButtons[i].addEventListener ('click', function(evt) {
         evt.preventDefault();
 
         modal.classList.add('modal--show');
       });
     }
-  };
-
-  showModal('.featured__button');
-  showModal('.cart__svg--catalog');
+  }
 }
