@@ -19,7 +19,7 @@ toggleNav.addEventListener('click', function(evt) {
 // слайдер на Index
 const main = document.querySelector('.page-main');
 
-if (main.classList.contains('page-main--index')) {
+if (main.classList.contains('page-main--slider')) {
   const reviews = document.querySelector('.reviews');
   const slides = reviews.querySelectorAll('.slider__item');
   const sliderButtons = reviews.querySelectorAll('.slider__btn');

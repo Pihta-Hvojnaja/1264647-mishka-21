@@ -3,6 +3,7 @@
   .padding-y(31px; 41px);
 
   &::after {
+    background-size: contain;
     background-repeat: repeat-x;
   }
 
@@ -14,7 +15,6 @@
       width: 100%;
       height: 7px;
       background-image: url("../img/zigzag_line_desktop.svg");
-      background-size: contain;
     }
   }
 }
@@ -96,17 +96,16 @@
 
 @media (min-width: @tablet-width) {
   .featured {
-    .padding-y(52px; 70px);
+    .padding-y(52px; 72px);
 
     &::after {
-      height: 17px;
-      background-size: contain;
+      height: 18px;
     }
   }
 
   .featured__header {
     .flex();
-    margin-bottom: 35px;
+    margin-bottom: 33px;
   }
 
   .featured__info {
@@ -181,7 +180,7 @@
 
 @media (min-width: @desktop-width) {
   .featured {
-    .padding-y(69px; 110px);
+    .padding-y(70px; 110px);
   }
 
   .featured__card {
