@@ -83,8 +83,8 @@ if (main.classList.contains('page-main--modal')) {
     });
   }
 
-  if (main.querySelector('.cart__svg--catalog')) {
-    const orderButtons = main.querySelectorAll('.cart__svg--catalog');
+  if (main.querySelector('.cart-svg--catalog')) {
+    const orderButtons = main.querySelectorAll('.cart-svg--catalog');
 
     for (let i = 0; i < orderButtons.length; i++) {
       orderButtons[i].addEventListener ('click', function(evt) {

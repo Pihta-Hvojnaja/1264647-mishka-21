@@ -78,7 +78,9 @@
     width: 100%;
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
+      outline: none;
       border-color: @color-email-line;
     }
   }
@@ -90,7 +92,9 @@
     padding-right: 50px;
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
+      outline: none;
       border-color: @color-email-line;
     }
   }
@@ -221,6 +225,18 @@
   }
 }
 
+.form__control:focus + .form__label {
+  color: @color-email-line;
+
+  &--radio::before {
+    box-shadow: 0 0 0 2px @color-email-line;
+  }
+
+  &::after {
+    border-color: @color-email-line;
+  }
+}
+
 .form__footnote {
   margin: 0 0 30px 0;
   .text(14px; 16px);
@@ -231,6 +247,15 @@
   display: block;
   padding: 16px;
   .text(17px; 16px);
+
+  &:active {
+    outline: none;
+  }
+
+  &:focus:not(:active) {
+    outline: none;
+    border-color: @color-email-line;
+  }
 }
 
 @media (max-width: @tablet-width - 1px) {
