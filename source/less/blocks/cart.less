@@ -7,25 +7,14 @@
 .cart__link {
   display: block;
   position: relative;
-  padding: 28px 30px 28px 76px;
+  padding: 29px 30px 26px 76px;
   color: @black;
-
-  .cart__svg {
-    fill: @black;
-    opacity: 0.2;
-  }
-
-  &:hover .cart__svg {
-    fill: @green-light;
-    opacity: 1;
-  }
 
   &:hover span {
     opacity: 0.6;
   }
 
-  &:active span,
-  &:active .cart__svg {
+  &:active span {
     fill: @green-light;
     opacity: 0.3;
   }
@@ -35,15 +24,6 @@
     padding-left: 85px;
     padding-right: 5px;
   }
-}
-
-.cart__svg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 30px;
-  margin: auto;
-  box-shadow: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -57,19 +37,10 @@
     padding: 34px 50px 28px 85px;
     text-align: right;
   }
-
-  .cart__svg {
-    top: 2px;
-    left: 32px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .cart__link {
     padding: 31px 2px 28px 83px;
-  }
-
-  .cart__svg {
-    left: 30px;
   }
 }

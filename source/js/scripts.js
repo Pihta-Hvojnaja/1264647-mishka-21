@@ -19,7 +19,7 @@ toggleNav.addEventListener('click', function(evt) {
 // слайдер на Index
 const main = document.querySelector('.page-main');
 
-if (main.classList.contains('page-main--index')) {
+if (main.classList.contains('page-main--slider')) {
   const reviews = document.querySelector('.reviews');
   const slides = reviews.querySelectorAll('.slider__item');
   const sliderButtons = reviews.querySelectorAll('.slider__btn');
@@ -64,19 +64,34 @@ if (main.classList.contains('page-main--index')) {
 // модальное окно
 const pageBody = document.querySelector('.page-body');
 
-if (main.classList.contains('page-main--index')) {
+if (main.classList.contains('page-main--modal')) {
   const modal = pageBody.querySelector('.modal');
-  const orderButton = main.querySelector('.featured__button');
-
-  orderButton.addEventListener ('click', function(evt) {
-    evt.preventDefault();
-
-    modal.classList.add('modal--show');
-  });
 
   window.addEventListener ('keydown', function(evt) {
     if (evt.keyCode === 27) {
       modal.classList.remove('modal--show');
     }
   });
+
+  if (main.querySelector('.featured__button')) {
+    let orderButton = main.querySelector('.featured__button');
+
+    orderButton.addEventListener ('click', function(evt) {
+      evt.preventDefault();
+
+      modal.classList.add('modal--show');
+    });
+  }
+
+  if (main.querySelector('.cart-svg--catalog')) {
+    const orderButtons = main.querySelectorAll('.cart-svg--catalog');
+
+    for (let i = 0; i < orderButtons.length; i++) {
+      orderButtons[i].addEventListener ('click', function(evt) {
+        evt.preventDefault();
+
+        modal.classList.add('modal--show');
+      });
+    }
+  }
 }

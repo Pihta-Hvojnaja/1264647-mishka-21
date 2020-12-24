@@ -1,1 +1,44 @@
-// Здесь будут стили
+.video {
+  position: relative;
+  max-height: 150px;
+
+  @media (min-width: @tablet-width) {
+    max-height: 455px;
+  }
+}
+
+.video__img {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .block-size(683px; 453px);
+  }
+}
+
+.video__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  .block-size (101px; 77px);
+  background-color: transparent;
+  background-image: url("../img/play.svg");
+  background-position: center;
+  border: none;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 30px;
+  }
+}

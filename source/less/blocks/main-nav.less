@@ -2,7 +2,6 @@
   font-family: @font-family;
   line-height: 24px;
   font-weight: 700;
-  background-image: linear-gradient(@white 88px, @color-background-catalog);
 }
 
 .main-nav__top {
@@ -11,9 +10,8 @@
 
   @media (max-width: @tablet-width - 1px) {
     position: relative;
-    padding: 22px 30px 18px 30px;
+    padding: 22px 30px 17px 30px;
     text-align: center;
-    border-top: 1px solid @color-card-line;
   }
 }
 
@@ -30,11 +28,12 @@
   position: absolute;
   top: 0;
   right: 0;
-  .block-size(82px; 80px);
+  .block-size(82px; 100%);
   padding: 0;
   background-color: @white;
   cursor: pointer;
   border: none;
+  box-shadow: @grey-shadow;
 }
 
 .main-nav__list-top,
@@ -50,6 +49,11 @@
   margin: 0;
 }
 
+.main-nav__bottom {
+  background-color: @color-background-catalog;
+  border-top: 1px solid @color-card-line;
+}
+
 .main-nav__extra-info {
   display: none;
   margin: 0;
@@ -62,7 +66,8 @@
     grid-template-rows: auto auto;
     grid-template-areas:
       "logo logo logo nav-m nav-m nav-m"
-      ". nav-t nav-t nav-t nav-b .";
+      "nav-t nav-t nav-t nav-t nav-b nav-b";
+    background-image: linear-gradient(@white 88px, @color-background-catalog);
   }
 
   .main-nav__top {
@@ -84,6 +89,11 @@
 
   .main-nav__list-top {
     grid-area: nav-t;
+    padding-left: 50px;
+
+    &--no-index {
+      background-color: @grey-light;
+    }
   }
 
   .main-nav__middle {
@@ -125,6 +135,11 @@
 
   .main-nav__bottom {
     grid-area: nav-b;
+    padding-right: 50px;
+
+    &--no-index {
+      background-color: @grey-light;
+    }
   }
 
   .main-nav__extra-info {
@@ -141,6 +156,7 @@
     grid-template-areas:
       ". . nav-t logo nav-m . ."
       "nav-b nav-b nav-b nav-b nav-b nav-b nav-b";
+    background-image: none;
   }
 
   .main-nav__top {
@@ -153,6 +169,8 @@
   }
 
   .main-nav__list-top {
+    padding-left: 0;
+    background-color: transparent;
     box-shadow: @grey-shadow;
   }
 
@@ -175,7 +193,7 @@
     grid-template-columns: 1fr 50px 450px 250px 350px 50px 1fr;
     grid-template-rows: auto;
     grid-template-areas: ". . list . info . .";
-    border-top: 1px solid @color-card-line;
+    padding-right: 0;
   }
 
   .main-nav__list-bottom {

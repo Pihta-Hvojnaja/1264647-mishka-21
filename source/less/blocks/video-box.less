@@ -1,24 +1,65 @@
 .video-box {
+  padding-bottom: 58px;
+}
+
+.video-box__wrapper {
   .flex();
+  width: 260px;
+  margin: 0 auto;
+  border: 1px solid @color-card-line;
+
+  &:hover {
+    box-shadow: 0 6px 10px fade(@black, 10%);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px fade(@black, 10%);
+  }
+
+  @media (min-width: 394px) {
+    width: 334px;
+  }
 }
 
 .video-box__heading {
-  order: 1;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 21px 30px 26px 90px;
   .text(17px; 24px);
+
+  &::before {
+    .pseudo();
+    top: 0;
+    bottom: 3px;
+    left: 33px;
+    margin: auto 0;
+    .block-size(32px; 22px);
+    background-image: url("../img/video.svg");
+    background-position: center;
+  }
+}
+
+.video-box__video {
+  margin: 0 auto;
+}
+
+.video-box__inner-wrapper {
+  max-width: 260px;
+  margin: 0 auto;
+  padding: 35px 30px 33px 33px;
 }
 
 .video-box__description {
-  order: 3;
+  margin: 0 0 41px 0;
   .text(13px; 24px);
   color: @black-light;
 }
 
-.video-box__video {
-  order: 2;
-}
-
 .video-box__button {
-  order: 4;
+  display: block;
+  .block-size(192px; 52px);
+  padding-top: 17px;
   line-height: 16px;
 }
 
@@ -29,24 +70,87 @@
 }
 
 @media (min-width: @tablet-width) {
-  .video-box__video {
-    order: 1;
+  .video-box {
+    padding-bottom: 66px;
+  }
+
+  .video-box__wrapper {
+    width: 668px;
+    padding-bottom: 10px;
   }
 
   .video-box__heading {
     order: 2;
+    padding-left: 106px;
+    font-size: 20px;
+
+    &::before {
+      bottom: 8px;
+      left: 40px;
+    }
+  }
+
+  .video-box__video {
+    margin-bottom: 18px;
+  }
+
+  .video-box__inner-wrapper {
+    order: 3;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 40px 33px 40px;
+  }
+
+  .video-box__description {
+    .text(15px; 30px);
+  }
+
+  .video-box__button {
+    width: 584px;
+    max-width: 100%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .video-box {
+    padding-bottom: 106px;
+  }
+
+  .video-box__wrapper {
     display: grid;
-    grid-template-columns: 682px auto;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 683px 367px;
+    grid-template-rows: auto 1fr;
+    width: 100%;
+  }
+
+  .video-box__heading {
+    width: 200px;
+    padding-top: 95px;
+    padding-left: 78px;
+
+    &::before {
+      top: -47px;
+      left: 78px;
+    }
   }
 
   .video-box__video {
     grid-column: span 1;
-    grid-row: span 3;
+    grid-row: span 2;
+    position: relative;
+    width: 683px;
+    height: 424px;
+  }
+
+  .video-box__inner-wrapper {
+    padding: 2px 60px 0 78px;
+  }
+
+  .video-box__description {
+    margin-bottom: 50px;
+  }
+
+  .video-box__button {
+    width: 231px;
   }
 }
