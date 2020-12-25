@@ -19,20 +19,20 @@
           </picture>
         </a>
 
-        <button class="focus main-nav__toggle" type="button">
+        <button class="main-nav__toggle focus" type="button">
           <span class="hidden">Открыть меню</span>
         </button>
       </div>
 
       <ul class="site-list-top main-nav__list-top">
         <li class="site-list-top__item main-nav__item">
-          <a class="reaction focus site-list-top__link" href="catalog.html">
+          <a class="site-list-top__link reaction focus--relative" href="catalog.html">
             Каталог товаров
           </a>
         </li>
 
         <li class="site-list-top__item main-nav__item">
-          <a class="reaction focus site-list-top__link" href="form.html">
+          <a class="site-list-top__link reaction focus--relative" href="form.html">
             Вязание на заказ
           </a>
         </li>
@@ -41,7 +41,7 @@
       <div class="main-nav__middle">
         <form class="search main-nav__search" action="https://echo.htmlacademy.ru" method="get">
           <div class="search__wrapper">
-            <button class="search__submit" type="submit">
+            <button class="search__submit focus" type="submit">
               <span class="hidden">Найти</span>
 
               <svg class="search__svg"  width="18" height="18" viewBox="0 0 18 18">
@@ -49,13 +49,13 @@
               </svg>
             </button>
 
-            <input class="search__control" id="search" type="search" name="search" placeholder="Поиск по сайту">
+            <input class="search__control focus" id="search" type="search" name="search" placeholder="Поиск по сайту">
             <label class="hidden" for="search">Найти на сайте</label>
           </div>
         </form>
 
         <p class="cart main-nav__cart">
-          <a class="cart__link" href="#">
+          <a class="cart__link focus--relative" href="#">
             <svg class="cart-svg" width="21" height="18">
               <use xlink:href="img/sprite.svg#cart"></use>
             </svg>
@@ -68,13 +68,13 @@
       <div class="main-nav__bottom">
         <ul class="site-list-bottom main-nav__list-bottom">
           <li class="site-list-bottom__item main-nav__item">
-            <a class="reaction site-list-bottom__link" href="#">
+            <a class="site-list-bottom__link reaction focus" href="#">
               Новые поступления
             </a>
           </li>
 
           <li class="site-list-bottom__item main-nav__item">
-            <a class="reaction site-list-bottom__link" href="#">
+            <a class="site-list-bottom__link reaction focus" href="#">
               Распродажа
             </a>
           </li>
@@ -85,19 +85,19 @@
     </nav>
   </header>
   <!-- MAIN -->
-  <main class="page-main page-main--slider page-main--modal">
+  <main class="page-main">
     <div class="top-main top-main--index">
       <h1 class="title title--main-heading top-main__heading">Милые штуки ручной <br> работы для дома</h1>
 
       <ul class="catalog-nav top-main__catalog-nav">
         <li class="catalog-nav__item">
-          <a class="catalog-nav__link catalog-nav__link--interior" href="#">
+          <a class="catalog-nav__link catalog-nav__link--interior focus--button" href="#">
             Предметы <br> интерьера
           </a>
         </li>
 
         <li class="catalog-nav__item">
-          <a class="catalog-nav__link catalog-nav__link--toy" href="#">
+          <a class="catalog-nav__link catalog-nav__link--toy focus--button" href="#">
             Детские <br> игрушки
           </a>
         </li>
@@ -154,7 +154,7 @@
         <footer class="featured__footer">
           <b class="featured__price">Цена: 990 руб.</b>
 
-          <a class="button featured__button" href="#">ЗАКАЗАТЬ</a>
+          <a class="button featured__button focus--button" href="#">ЗАКАЗАТЬ</a>
         </footer>
       </div>
     </section>
@@ -205,7 +205,7 @@
               </p>
 
               <cite class="review__author"><b>Анастасия Красильникова</b></cite>
-              <a class="review__link" href="#">@misssssiskras</a>
+              <a class="review__link focus" href="#">@misssssiskras</a>
             </blockquote>
           </li>
 
@@ -217,26 +217,26 @@
               </p>
 
               <cite class="review__author"><b>Екатерина Красильникова</b></cite>
-              <a class="review__link" href="#">@misssssiskras2</a>
+              <a class="review__link focus" href="#">@misssssiskras2</a>
             </blockquote>
           </li>
         </ul>
 
         <div class="slider__buttons">
-          <button class="reaction slider__btn slider__btn--prev" type="button">
+          <button class="slider__btn slider__btn--prev reaction focus" type="button">
             <span class="hidden">
               Предыдущий отзыв
             </span>
           </button>
 
-          <button class="reaction slider__btn slider__btn--next" type="button">
+          <button class="slider__btn slider__btn--next reaction focus" type="button">
             <span class="hidden">
               Следующий отзыв
             </span>
           </button>
         </div>
 
-        <a class="button slider__to-write" href="#">НАПИСАТЬ</a>
+        <a class="button slider__to-write focus--button" href="#">НАПИСАТЬ</a>
       </div>
     </section>
 
@@ -251,7 +251,7 @@
             </dt>
             <dd class="contact__definition">
               <address class="address-site">
-                <a class="address-site__email" href="mailto:info@mimimishkashop.ru">
+                <a class="address-site__email focus" href="mailto:info@mimimishkashop.ru">
                   info@mimimishkashop.ru
                 </a>
               </address>
@@ -289,13 +289,13 @@
         </iframe>
       </div>
 
-      <a class="button contacts__to-write" href="#">НАПИШИТЕ НАМ</a>
+      <a class="button contacts__to-write focus--button" href="#">НАПИШИТЕ НАМ</a>
     </section>
   </main>
   <!-- FOOTER -->
   <footer class="page-footer">
     <div class="container page-footer__wrapper">
-      <a class="page-footer__logo" href="index.html">
+      <a class="page-footer__logo focus" href="index.html">
         <svg class="page-footer__svg-logo" role="img" width="102" height="34" viewBox="0 0 102 34" aria-label="Логотип магазина в виде слова Mishka">
           <use xlink:href="img/sprite.svg#logo_footer"></use>
         </svg>
@@ -306,7 +306,7 @@
 
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link page-footer__link" href="#">
+            <a class="social__link page-footer__link focus" href="#">
               <span class="hidden">Мы в Instagram</span>
               <svg class="page-footer__svg"  width="22" height="22" viewBox="0 0 22 22">
                 <use xlink:href="img/sprite.svg#insta"></use>
@@ -315,7 +315,7 @@
           </li>
 
           <li class="social__item">
-            <a class="social__link social__link--fb page-footer__link" href="#">
+            <a class="social__link social__link--fb page-footer__link focus" href="#">
               <span class="hidden">Мы в Facebook</span>
               <svg class="page-footer__svg" width="15" height="28" viewBox="0 0 15 28">
                 <use xlink:href="img/sprite.svg#fb"></use>
@@ -324,7 +324,7 @@
           </li>
 
           <li class="social__item">
-            <a class="social__link page-footer__link" href="#">
+            <a class="social__link page-footer__link focus" href="#">
               <span class="hidden">Мы в Twitter</span>
               <svg class="page-footer__svg" width="23" height="20" viewBox="0 0 23 20">
                 <use xlink:href="img/sprite.svg#twitter"></use>
@@ -337,7 +337,7 @@
       <section class="copyright">
         <h2 class="hidden">Разработчик сайта</h2>
 
-        <a class="copyright__link page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link page-footer__link focus" href="https://htmlacademy.ru/intensive/adaptive">
           <b>Разработано</b>
           <svg class="copyright__svg page-footer__svg" width="27" height="35" viewBox="0 0 27 35">
             <use xlink:href="img/sprite.svg#html_academy"></use>

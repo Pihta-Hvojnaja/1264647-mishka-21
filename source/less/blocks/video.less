@@ -29,7 +29,9 @@
   background-position: center;
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus:not(:active) {
+    outline: none;
     transform: scale(1.2);
   }
 

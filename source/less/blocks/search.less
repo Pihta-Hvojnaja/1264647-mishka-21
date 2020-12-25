@@ -1,7 +1,10 @@
 .search {
   display: block;
   text-align: center;
-  box-shadow: @grey-shadow;
+
+  @media (max-width: @tablet-width - 1px) {
+    border-bottom: 1px solid @color-card-line;
+  }
 }
 
 .search__wrapper {
@@ -84,5 +87,6 @@
 
   @media (min-width: @desktop-width) {
     padding-right: 5px;
+    border-bottom: none;
   }
 }
