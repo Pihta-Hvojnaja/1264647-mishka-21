@@ -7,7 +7,7 @@
 .cart__link {
   display: block;
   position: relative;
-  padding: 29px 30px 26px 76px;
+  padding: 27px 30px 26px 76px;
   color: @black;
 
   &:hover span {
@@ -28,12 +28,13 @@
 
 @media (min-width: @tablet-width) {
   .cart {
-    .flex();
-    align-items: center;
     max-width: 365px;
   }
 
   .cart__link {
+    .flex();
+    align-items: center;
+    min-height: 100%;
     padding: 34px 50px 28px 85px;
     text-align: right;
   }
@@ -41,6 +42,6 @@
 
 @media (min-width: @desktop-width) {
   .cart__link {
-    padding: 31px 2px 28px 83px;
+    padding: 32px 2px 28px 83px;
   }
 }

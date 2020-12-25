@@ -19,7 +19,7 @@ toggleNav.addEventListener('click', function(evt) {
 // слайдер на Index
 const main = document.querySelector('.page-main');
 
-if (main.classList.contains('page-main--slider')) {
+if (main.querySelector('.slider')) {
   const reviews = document.querySelector('.reviews');
   const slides = reviews.querySelectorAll('.slider__item');
   const sliderButtons = reviews.querySelectorAll('.slider__btn');
@@ -64,7 +64,7 @@ if (main.classList.contains('page-main--slider')) {
 // модальное окно
 const pageBody = document.querySelector('.page-body');
 
-if (main.classList.contains('page-main--modal')) {
+if (pageBody.querySelector('.modal')) {
   const modal = pageBody.querySelector('.modal');
 
   window.addEventListener ('keydown', function(evt) {
