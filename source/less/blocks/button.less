@@ -18,6 +18,16 @@
     color: fade(@white, 30%);
   }
 
+  &:focus {
+    outline: none;
+
+    &:not(:hover):not(:active) {
+      color: @white;
+      background-color: lighten(@black-light, 30%);
+      opacity: 1;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     .text(17px; 20px);
   }

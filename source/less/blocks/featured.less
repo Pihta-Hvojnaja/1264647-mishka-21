@@ -83,6 +83,11 @@
 .featured__img {
   display: block;
   margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: 400px) and (max-width: @tablet-width - 1px) {
+    width: 340px;
+  }
 }
 
 .featured__footer {
@@ -98,7 +103,7 @@
 }
 
 .featured__button {
-  width: 260px;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {

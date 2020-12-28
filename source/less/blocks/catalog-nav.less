@@ -84,6 +84,16 @@
     opacity: 0.3;
   }
 
+  &:focus {
+    outline: none;
+
+    &:not(:hover):not(:active) {
+      color: @white;
+      background-color: lighten(@black-light, 30%);
+      opacity: 1;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     .text(20px; 30px);
     padding: 25px 120px 34px 36px;

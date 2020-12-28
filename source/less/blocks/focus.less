@@ -1,33 +1,10 @@
-.focus {
-  &:focus {
-    &:not(:active) {
-      outline-color: lighten(@black-light, 30%);
-      z-index: 2;
-
-      svg {
-        fill: @green-light;
-        opacity: 1;
-      }
-    }
-  }
-
-  &--relative:focus:not(:active) {
+.focus:focus {
+  &:not(:active) {
     outline-color: lighten(@black-light, 30%);
-    position: relative;
     z-index: 2;
 
     svg {
       fill: @green-light;
-      opacity: 1;
-    }
-  }
-
-  &--button:focus {
-    outline: none;
-
-    &:not(:hover):not(:active) {
-      color: @white;
-      background-color: lighten(@black-light, 30%);
       opacity: 1;
     }
   }
