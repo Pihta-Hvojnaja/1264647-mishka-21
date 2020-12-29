@@ -67,7 +67,7 @@
   height: 52px;
   font-family: @font-family;
   .text(17px; 18px);
-  color: @black-light;
+  color: @black;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid @black;
@@ -228,12 +228,26 @@
 .form__control:focus + .form__label {
   color: @color-email-line;
 
-  &--radio::before {
+  &::before {
     box-shadow: 0 0 0 2px @color-email-line;
   }
 
   &::after {
     border-color: @color-email-line;
+  }
+}
+
+.form__control:disabled + .form__label {
+  color: @color-focus;
+
+  &--radio::before {
+    background-color: @color-focus;
+    box-shadow: 0 0 0 2px @color-focus;
+  }
+
+  &--checkbox::before,
+  &::after {
+    border-color: @color-focus;
   }
 }
 
@@ -261,7 +275,6 @@
 @media (max-width: @tablet-width - 1px) {
   .form {
     max-width: 600px;
-    margin: 0 auto;
   }
 
   .form__legend {

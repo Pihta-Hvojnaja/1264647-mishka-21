@@ -83,8 +83,8 @@ if (pageBody.querySelector('.modal')) {
     });
   }
 
-  if (main.querySelector('.cart-svg--catalog')) {
-    const orderButtons = main.querySelectorAll('.cart-svg--catalog');
+  if (main.querySelector('.card__cart-svg')) {
+    const orderButtons = main.querySelectorAll('.card__cart-svg');
 
     for (let i = 0; i < orderButtons.length; i++) {
       orderButtons[i].addEventListener ('click', function(evt) {
